@@ -1,0 +1,40 @@
+---
+layout: page
+title: Categories
+bigimg: /img/category.jpg
+---
+<style>
+.title{
+    color: #FF5A5A;
+    font-weight: bold;
+}
+.date{
+  color: #BDBDBD;
+  font-size: 12px;
+}
+a.one:link {color:#000000;}
+a.one:visited {color:#000000;}
+a.one:hover {color:#FF5A5A;}
+
+</style>
+
+<hr>
+<h3 class="title">C/C++</h3>
+  <ul>
+  	{% for post in site.categories.ccplus %}
+  	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+  	{% endfor %}
+  </ul>
+<h3 class="title">Python</h3>
+  <ul>
+    {% for post in site.categories.python %}
+    <li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    {% endfor %}
+  </ul>
+<h3 class="title">Git</h3>
+  <ul>
+  	{% for post in site.categories.github_blog %}
+  	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+  	{% endfor %}
+  </ul>
+<hr>
