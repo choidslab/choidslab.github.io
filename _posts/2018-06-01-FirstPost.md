@@ -6,6 +6,8 @@ date: 2018-06-01 14:25:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
+category: etc
+tags: [github, blog]
 ---
 <p>
   Github를 이용하여 블로그를 만들기로 결심한지 3일 간의 삽질 끝에 첫 포스팅을 작성하게 되었습니다. Jekyll 테마를 설치하고, 여러가지 기능을 설정하면서 다양한 오류를 접하고 해결하며 많은 것들을 배울 수 있었습니다.

@@ -2,4 +2,4 @@ User-agent: Googlebot
 User-agent: NaverBot
 Allow: /
 
-Sitemap: https://dslab0915.github.io/
+Sitemap: https://choidslab.github.io/

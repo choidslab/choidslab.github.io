@@ -19,22 +19,34 @@ a.one:hover {color:#FF5A5A;}
 </style>
 
 <hr>
-<h3 class="title">C/C++</h3>
-  <ul>
-  	{% for post in site.categories.ccplus %}
-  	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
-  	{% endfor %}
-  </ul>
 <h3 class="title">Python</h3>
   <ul>
     {% for post in site.categories.python %}
     <li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
     {% endfor %}
   </ul>
-<h3 class="title">Git</h3>
-  <ul>
-  	{% for post in site.categories.github_blog %}
-  	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
-  	{% endfor %}
-  </ul>
+  <h3 class="title">Machine Learning</h3>
+    <ul>
+    	{% for post in site.categories.machinelearning %}
+    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    	{% endfor %}
+    </ul>
+  <h3 class="title">C/C++</h3>
+    <ul>
+    	{% for post in site.categories.ccplus %}
+    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    	{% endfor %}
+    </ul>
+  <h3 class="title">git</h3>
+    <ul>
+    	{% for post in site.categories.github_blog %}
+    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    	{% endfor %}
+    </ul>
+    <h3 class="title">ETC</h3>
+      <ul>
+      	{% for post in site.categories.etc %}
+      	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+      	{% endfor %}
+      </ul>
 <hr>
