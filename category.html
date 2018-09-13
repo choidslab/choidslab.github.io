@@ -17,42 +17,54 @@ a.one:visited {color:#000000;}
 a.one:hover {color:#FF5A5A;}
 
 </style>
-
+	
 <hr>
-<h3 class="title">Python</h3>
+<p>
+<h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Python</h3>
   <ul>
     {% for post in site.categories.python %}
     <li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
     {% endfor %}
   </ul>
-  <h3 class="title">Machine Learning</h3>
+</p>
+<p>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Machine Learning</h3>
     <ul>
     	{% for post in site.categories.machinelearning %}
     	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
     	{% endfor %}
     </ul>
-  <h3 class="title">C/C++</h3>
+</p>
+<p>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;C/C++</h3>
     <ul>
     	{% for post in site.categories.ccplus %}
     	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
     	{% endfor %}
     </ul>
-  <h3 class="title">git</h3>
+</p>
+<p>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;git</h3>
     <ul>
     	{% for post in site.categories.github_blog %}
     	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
     	{% endfor %}
     </ul>
-  <h3 class="title">TWIL(Today What I Learned)</h3>
+</p>
+<p>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;TWIL(Today What I Learned)</h3>
     <ul>
     	{% for post in site.categories.twil %}
     	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
     	{% endfor %}
     </ul>
-    <h3 class="title">ETC</h3>
+</p>
+<p>
+    <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;ETC</h3>
       <ul>
       	{% for post in site.categories.etc %}
       	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
       	{% endfor %}
       </ul>
+</p>
 <hr>
