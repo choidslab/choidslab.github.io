@@ -52,7 +52,7 @@ a.one:hover {color:#FF5A5A;}
     </ul>
 </p>
 <p>
-  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Today I Learned)</h3>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Today I Learned</h3>
     <ul>
     	{% for post in site.categories.TIL %}
     	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
