@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: DSLab
+title: DS 개발공부로그
 
 # Short description of your site
 description: DS 개발공부로그
@@ -77,7 +77,7 @@ social-network-links:
 #  rss: false
   email: "choids.lab@gmail.com"
   facebook: dooseop.choi
-  github: dslab0915
+  github: choidslab
   #twitter: daattali
 #  reddit: yourname
 #  google-plus: +DeanAttali
