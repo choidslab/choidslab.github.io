@@ -10,7 +10,7 @@ category: python
 tags: [python, module, import, package , Introducing Python]
 ---
 
-#### 1. 모둘과 import 문
+#### 1. 모듈과 import 문
   - 모듈: 파이썬 코드로 작성된 하나의 파일을 의미
   - `import` 문을 이용하여 모듈을 추가할 수 있음
 
