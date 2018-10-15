@@ -53,4 +53,4 @@ nick
 
 #### [Reference]
 
-[1] 처음시작하는 파이썬(Introducing Python), p.145-151
+[1] 처음시작하는 파이썬(Introducing Python), p.171-196
