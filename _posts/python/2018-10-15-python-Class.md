@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Class"
+title: "class, 상속, 함수 Override, super()"
 subtitle: ""
 date: 2018-10-15 23:00:00 +0900
 comments: true
@@ -40,8 +40,78 @@ nick
     - 새로운 객체를 반환
     - someone 객체를 연결
 
-### 2. 상속(Inheritance)
-  작성중...
+#### 2. 상속(Inheritance), 오버라이드(Override)
+  - 기존의 클래스에 새로운 기능을 추가하거나 변경하여 코드의 재사용성을 높이는 객체지향언어의 개념
+  - 기존 클래스의 함수는 상속된 클래스에서 재정의(오버라이드) 할 수 있음
+  - 상위 클래스: 부모 클래스, 상위 클래스, 슈퍼(Super) 클래스, 베이스(Base) 클래스
+  - 하위 클래스: 자식 클래스, 하위 클래스, 서브(Sub) 클래스, 파생된(Derived) 클래스
+
+```python
+class Car():
+    def exclaim(self):
+        print("I'm a Car")
+
+class Yugo(Car):
+    # 함수 오버라이드
+    def exclaim(self):
+        print("I'm a Yugo! Much like a Car, but more Yugo-ish.")
+
+give_me_a_car = Car()
+give_me_a_yugo = Yugo()
+
+give_me_a_car.exclaim()
+give_me_a_yugo.exclaim()
+```
+
+  - 상위 클래스 Car()로부터 상속된 Yugo() 클래스의 exclaim() 함수는 상위 클래스와 다른 동작을 하고 있음
+  - 이와 같이 상속받은 함수를 하위 클래스에서 재정의 하는 것을 오버라이드(Override)라고 함
+  - 또한, 다음 예제코드와 같이 상위 클래스에는 없는 함수를 하위 클래스에 추가로 정의할 수 있음
+
+```python
+class Car():
+    def exclaim(self):
+        print("I'm a Car")
+
+class Yugo(Car):
+    # 함수 오버라이드
+    def exclaim(self):
+        print("I'm a Yugo! Much like a Car, but more Yugo-ish.")
+    # 하위 클래스에서 추가된 함수
+    def need_a_push(selfs):
+        print("A little help here?")
+
+give_me_a_car = Car()
+give_me_a_yugo = Yugo()
+
+give_me_a_car.exclaim()
+give_me_a_yugo.exclaim()
+give_me_a_yugo.need_a_push() # 하위 클래스에 추가된 함수 호출
+```
+
+#### 3. super() 함수
+  - 하위 클래스에서 상위 클래스의 함수를 호출하는 방법
+  - `super()` 함수
+  - 다음 예제코드는 하위 클래스에서 super()함수를 이용하여 상위 클래스의 __init__() 함수를 명시적으로 호출하여 name 값을 초기화 하는 것을 보여준다.
+
+```python
+class Person():
+    def __init__(self, name):
+        self.name = name
+
+# Person 클래스를 상속
+class EmailPerson(Person):
+    def __init__(self, name, email):
+        # 상위 클래스 Person의 __init__함수를 이용하여 name 값을 초기화
+        super().__init__(name)
+        self.email = email
+
+if __name__ == "__main__":
+    p1 = EmailPerson("Kim", "Kim@kim.com")
+    print(p1.name + ' & ' + p1.email)
+# 실행결과
+# Kim & Kim@kim.com
+```
+
 
 <br>
 
@@ -53,4 +123,4 @@ nick
 
 #### [Reference]
 
-[1] 처음시작하는 파이썬(Introducing Python), p.171-196
+[1] 처음시작하는 파이썬(Introducing Python), p.171-180
