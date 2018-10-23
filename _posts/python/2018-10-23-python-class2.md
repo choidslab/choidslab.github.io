@@ -40,6 +40,7 @@ if __name__ == "__main__":
     fowl.name = "Tim"
     print(fowl.name)
 ```
+<br>
 
 #### 2. property 데커레이터를 이용한 변수 private 구현
   - 앞서 언급한 코드의 경우 get_name(), set_name() 함수를 직접 호출 할 수 있기 때문에 멤버 변수를 완벽히 private하게 할 수 없음
@@ -74,6 +75,8 @@ if __name__ == "__main__":
   - 앞선 예제코드와 달리 직접 getter/setter 함수에 접근할 수 없음
   - property 데커레이터를 통해 name을 속성에 접근하듯 할 수 있음
   - 하지만, 코드를 호출하는 위치에서 hidden_name이라는 변수를 알고 있을 경우 여전히 직접 접근이 가능
+
+<br>
 
 #### 3. 클래스 멤버 변수 접근제어를 위한 Name Mangling
 

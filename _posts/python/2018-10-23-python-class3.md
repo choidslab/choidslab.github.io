@@ -39,6 +39,8 @@ if __name__ == "__main__":
     A.kids()
 ```
 
+<br>
+
 #### 2. static method
   - 정적 함수는 클래스나 객체에 영향을 미치지 않음, 편의를 위한 함수
   - `@staticmethod` 데커레이터가 함수에 정의 되어 있으면 이는 정적 함수를 의미
@@ -54,6 +56,8 @@ class CoyoteWeapon():
 
 CoyoteWeapon.commercial()
 ```
+
+<br>
 
 #### 3. 네임드 튜플(Named Tuple)
   - 클래스 선언 없이 객체를 생성하는 방법

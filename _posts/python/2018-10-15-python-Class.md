@@ -40,6 +40,8 @@ nick
     - 새로운 객체를 반환
     - someone 객체를 연결
 
+<br>
+
 #### 2. 상속(Inheritance), 오버라이드(Override)
   - 기존의 클래스에 새로운 기능을 추가하거나 변경하여 코드의 재사용성을 높이는 객체지향언어의 개념
   - 기존 클래스의 함수는 상속된 클래스에서 재정의(오버라이드) 할 수 있음
@@ -87,6 +89,7 @@ give_me_a_car.exclaim()
 give_me_a_yugo.exclaim()
 give_me_a_yugo.need_a_push() # 하위 클래스에 추가된 함수 호출
 ```
+<br>
 
 #### 3. super() 함수
   - 하위 클래스에서 상위 클래스의 함수를 호출하는 방법
