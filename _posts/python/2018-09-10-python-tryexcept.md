@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "예외처리, try/except"
+title: "[Python] 예외처리, try/except"
 subtitle: ""
 date: 2018-09-10 17:50:00 +0900
 comments: true
@@ -10,7 +10,7 @@ category: python
 tags: [python, try, except , Introducing Python]
 ---
 
-#### 1. 예외처리
+### 1. 예외처리
   - 어떤 상황에서 실패할 수 있는 코드를 실행했을 때 잠재적인 에러를 방지하기 위해 `예외처리`가 필요하다.
   - 파이썬에서는 `try/except` 구문 사용
   - 에러가 예상되는 코드에 `try`문 사용, 에러 처리를 위해서는 `except`문 사용
@@ -59,9 +59,9 @@ Position [q to quit]?q
 ```
 3을 입력하면 IndexError가 발생한다. 그리고 two를 입력하면 모든 예외를 처리하는 두 번째 예외 코드에서 int() 함수에 대한 예외가 발생하는 것을 확인할 수 있다.
 
-<br>
+---
 
-#### 2. 예외 만들기
+### 2. 예외 만들기
 모든 예외는 파이썬 표준 라이브러리에 이미 정의되어 있다. 따라서 필요한 예외 처리를 선택해서 활용할 수 있다. 프로그래머는 예외를 만들어 사용할 수 있는데 이 때 예외의 타입을 정의하기 위해 클래스(Class)를 활용한다. (클래스의 자세한 내용은 6장에서 학습) 예외는 클래스이고, `Exception 클래스`를 상속하여 정의할 수 있다. (Exception 클래스의 하위 클래스) 다음의 예시코드는 words 문자열에 대문자가 있을 경우 예외를 발생시키는 UppercaseException 예외를 만든 것이다. 예외는 `raise` 키워드를 통해 발생시킬 수 있다.
 
 ```python

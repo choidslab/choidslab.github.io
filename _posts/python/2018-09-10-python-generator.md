@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "제너레이터(Generator), 데코레이터(Decorator)"
+title: "[Python] 제너레이터(Generator), 데코레이터(Decorator)"
 subtitle: ""
 date: 2018-09-10 17:00:00 +0900
 comments: true
@@ -10,7 +10,7 @@ category: python
 tags: [python, generator, Introducing Python]
 ---
 
-#### 1. 제너레이터(Generator)
+### 1. 제너레이터(Generator)
 제너레이터는 파이썬에서 어떤 시퀀스를 생성하는 객체를 의미한다. 특히, 제너레이터는 이터레이터(Iterator)의 소스롤 자주 활용된다. 대표적인 제너레이터로는 `range()` 함수가 있다. 제너레이터는 제너레이터 함수로 함수 형태로 쓰일 수도 있는데 이 때 일반 함수와 달리 return이 아닌 `yield`문으로 값을 반환하게 된다. yield문은 간단히 말해 제너레이터 객체로 반환을 한다는 의미이다. 다음은 제너레이터의 예시 코드이다.
 
 ```python
@@ -35,9 +35,10 @@ tags: [python, generator, Introducing Python]
 4
 
 ```
-<br>
 
-#### 2. 데코레이터(Decorator)
+---
+
+### 2. 데코레이터(Decorator)
 미리 선언된 함수의 소스코드를 바꾸지 않고 함수의 기능을 수정하고 싶을 때 활용할 수 있는 기능이 데코레이터이다. 일반적인 예는 함수에 전달된 인자를 보기 위해 디버깅 문을 추가하는 것이다. 즉, `데코레이터는 하나의 함수를 취해 또 다른 함수를 반환하는 함수`이다. 이를 위해 다음 3가지를 활용한다.
   - *args와 **kwargs
   - 내부 함수

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "class, 상속, 함수 Override, super()"
+title: "[Python] class, 상속, 함수 Override, super()"
 subtitle: ""
 date: 2018-10-15 23:00:00 +0900
 comments: true
@@ -10,7 +10,7 @@ category: python
 tags: [python, class, inheritance, override, Introducing Python]
 ---
 
-#### 1. 객체(object)와 클래스(class)
+### 1. 객체(object)와 클래스(class)
   - Python에서는 모든 것이 `객체`
   - 숫자, 문자, 문자열 등...
   - 객체는 데이터(변수 또는 속성)와 코드(함수 또는 메소드)를 포함한다.
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     print(someone.name)
 
 # 실행결과
-nick
+# nick
 ```
   - class는 객체를 만드는 틀, class를 통해 여러개의 객체를 생성
   - 객체의 초기화를 위해 class 내부에 `__init__`함수 선언
@@ -40,9 +40,9 @@ nick
     - 새로운 객체를 반환
     - someone 객체를 연결
 
-<br>
+---
 
-#### 2. 상속(Inheritance), 오버라이드(Override)
+### 2. 상속(Inheritance), 오버라이드(Override)
   - 기존의 클래스에 새로운 기능을 추가하거나 변경하여 코드의 재사용성을 높이는 객체지향언어의 개념
   - 기존 클래스의 함수는 상속된 클래스에서 재정의(오버라이드) 할 수 있음
   - 상위 클래스: 부모 클래스, 상위 클래스, 슈퍼(Super) 클래스, 베이스(Base) 클래스
@@ -89,9 +89,10 @@ give_me_a_car.exclaim()
 give_me_a_yugo.exclaim()
 give_me_a_yugo.need_a_push() # 하위 클래스에 추가된 함수 호출
 ```
-<br>
 
-#### 3. super() 함수
+---
+
+### 3. super() 함수
   - 하위 클래스에서 상위 클래스의 함수를 호출하는 방법
   - `super()` 함수
   - 다음 예제코드는 하위 클래스에서 super()함수를 이용하여 상위 클래스의 __init__() 함수를 명시적으로 호출하여 name 값을 초기화 하는 것을 보여준다.

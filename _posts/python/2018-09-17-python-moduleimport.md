@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "import, module, package"
+title: "[Python] import, module, package"
 subtitle: ""
 date: 2018-09-17 16:20:00 +0900
 comments: true
@@ -10,7 +10,7 @@ category: python
 tags: [python, module, import, package , Introducing Python]
 ---
 
-#### 1. 모듈과 import 문
+### 1. 모듈과 import 문
   - 모듈: 파이썬 코드로 작성된 하나의 파일을 의미
   - `import` 문을 이용하여 모듈을 추가할 수 있음
 
@@ -52,9 +52,9 @@ Today's weather:  fog
 
 세 번째 방식의 경우 필요한 모듈만 import를 하였다. report 모듈의 get_description 함수만을 사용하도록 포함하였다. 이 방식 또한 alias를 이용할 수 있음을 예시 코드를 통해 확인할 수 있다.
 
-<br>
+---
 
-#### 2. 모둘 검색 경로
+#### 2. 모듈 검색 경로
 파이썬은 모듈 경로(Path)를 어떻게 찾아서 import 하게 되는 것일까? 파이썬은 리스트 형태로 저장된 디렉터리 경로명과 표준 sys 모듈에 저장되어 있는 ZIP 아카이브 파일을 참조하여 모듈을 찾게 된다. 그러나 기본적으로 모듈을 검색할 때는 해당 .py이 저장된 현재 디렉터리를 먼저 검사하여 import 할 파일을 찾게 된다.
 
 아래의 예시는 sys 모듈에 저장된 path 정보를 보여주는 코드와 결과이다.
@@ -76,20 +76,20 @@ for place in sys.path:
 /Applications/PyCharm.app/Contents/helpers/pycharm_matplotlib_backend
 ```
 
-<br>
+---
 
-#### 3. 패키지
+### 3. 패키지
   - 패키지는 앞서 설명한 모듈 파일들이 한데 모아 둔 계층구조의 폴더라 할 수 있다.
   - 파이썬은 \_\_init\_\_.py 파일을 포함하는 디렉터리를 패키지로 간주한다. (내용은 없어도 무관)
 
-<br>
+---
 
-#### 4. 파이썬 표준 라이브러리
+### 4. 파이썬 표준 라이브러리
   - 해당 내용은 향후 프로그램을 구현할 때 참조하면 되기 때문에 포스팅 내용 요약에서 생략
 
-<br>
+---
 
-#### 5. 다른 파이썬 코드 가져오기
+### 5. 다른 파이썬 코드 가져오기
 표준 라이브러리에서 원하는 모듈이 없거나 사용하고자 하는 모듈이 정상적으로 동작하지 않을 때가 있다. 이러한 경우 3rd-party 오픈소스를 통해 원하는 모듈을 가져와 사용할 수 있다.
   - PyPI
   - github

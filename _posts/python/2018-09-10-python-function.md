@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "함수(Function)"
+title: "[Python] 함수(Function)"
 subtitle: ""
 date: 2018-09-10 13:00:00 +0900
 comments: true
@@ -10,7 +10,7 @@ category: python
 tags: [python, function, Introducing Python]
 ---
 
-#### 1. 함수(Function)
+### 1. 함수(Function)
 함수는 코드의 재사용성을 높여준다. 함수는 크게 정의(Define)와 호출(Call)에 의해 동작되며 다음과 같은 일을 수행한다.
   - 값의 입력, 전달(argument, parameter)
   - 함수 내부 구조에 의한 값 처리
@@ -31,9 +31,10 @@ def do_something(parameter):
 def agree():
     return True
 ```
-<br>
 
-#### 2. 위치 인자(Positional Arguments)
+---
+
+### 2. 위치 인자(Positional Arguments)
 파이썬은 함수의 인자를 유연하게 처리할 수 있다. 값을 순서대로 상응하는 매개변수에 복사하는 위치 인자를 지원한다. 다음 함수는 위치 인자로 딕셔너리를 만들어 반환한다. 함수 호출 부분에 순서대로 입력된 인자 값이 함수의 정의된 위치에 순서대로 전달된 것을 결과 값을 통해 확인할 수 있다. 위치 인자를 정확히 활용하기 위해서는 각 위치별 인자 값의 의미를 알고 있어야 한다.
 ```python
 >>> def menu(wine, entree, dessert):
@@ -41,9 +42,10 @@ def agree():
 >>> menu('chardonnay','chicken','cake')
 {'wine': 'chardonnay', 'entree': 'chicken', 'dessert': 'cake'}
 ```
-<br>
 
-#### 3. 키워드 인자(Keyword Arguments)
+---
+
+### 3. 키워드 인자(Keyword Arguments)
 키워드 인자는 앞서 설명한 위치 인자의 위치 의미를 알아야만 하는 단점을 보완할 수 있게 해준다. 즉, 매개변수에 상응하는 이름을 지정하여 위치에 상관 없이 이름을 통해 매개변수의 위치에 관계 없이 정확히 값을 전달해 줄 수 있다. 아래는 키워드 인자를 사용한 예시이다.(키워드 인자와 위치 인자는 함께 사용할 수 있다.)
 ```python
 # 키워드 인자를 사용한 예제
@@ -54,9 +56,10 @@ def agree():
 >>> menu('frontenac', dessert='flan', entree='fish')
 {'wine': 'frontenac', 'entree': 'fish', 'dessert': 'flan'}
 ```
-<br>
 
-#### 4. 기본 매개변수 값 지정하기(Default Parameter)
+---
+
+### 4. 기본 매개변수 값 지정하기(Default Parameter)
 함수의 매개변수에 기본값을 지정하여 사용할 수 있다. 함수를 호출하는 위치에서 매개변수에 대응하는 전달인자 값을 제공하지 않을 경우, 기본 매개변수 값을 사용하게 된다. 다음은 예제 코드이다.
 
 ```python

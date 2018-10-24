@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "class, class method, static method, Named Tuple"
+title: "[Python] class, class method, static method, named tuple"
 subtitle: ""
 date: 2018-10-23 22:00:00 +0900
 comments: true
@@ -10,7 +10,7 @@ category: python
 tags: [python, class, classmethod, staticmethod, namedtuple, Introducing Python]
 ---
 
-#### 1. class method
+### 1. class method
   - 일반적으로 클래스 안에 정의된 함수는 `self`를 인자로 받는 인스턴스 함수(Instance Method)
   - `@classmethod` 데커레이터가 함수에 정의되어 있다면 이는 클래스 함수(Class Method)로 클래스 전체에 영향을 줌
   - 클래스 함수는 생성된 모든 객체에 영향을 줌
@@ -39,9 +39,9 @@ if __name__ == "__main__":
     A.kids()
 ```
 
-<br>
+---
 
-#### 2. static method
+### 2. static method
   - 정적 함수는 클래스나 객체에 영향을 미치지 않음, 편의를 위한 함수
   - `@staticmethod` 데커레이터가 함수에 정의 되어 있으면 이는 정적 함수를 의미
   - 전달인자로 `self`나 `cls`가 없음
@@ -57,9 +57,9 @@ class CoyoteWeapon():
 CoyoteWeapon.commercial()
 ```
 
-<br>
+---
 
-#### 3. 네임드 튜플(Named Tuple)
+### 3. 네임드 튜플(Named Tuple)
   - 클래스 선언 없이 객체를 생성하는 방법
   - tuple 성질을 가지면서 각 요소에 변수 이름으로 접근이 가능
   - 값이 불변(immutable)하는 객체
