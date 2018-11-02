@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "[Python] 제너레이터(Generator), 데코레이터(Decorator)"
+title: "[Python] Generator, Decorator, enumerate"
 subtitle: ""
 date: 2018-09-10 17:00:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
 category: python
-tags: [python, generator, Introducing Python]
+tags: [python, generator, decorator, enumerate, Introducing Python]
 ---
 
 ### 1. 제너레이터(Generator)
@@ -91,6 +91,23 @@ Keyword arguments: {}
 Result: 8
 8
 ```
+
+---
+
+### 3. enumerate
+```python
+for i, name in enumerate(['Tom', 'Choi', 'Steve']):
+  print(i, name)
+
+# 실행결과
+0 Tom
+1 Choi
+2 Steve
+```
+
+  - `enumerate`는 순서가 있는 type(리스트, 튜플, 문자열)을 입력으로 받아 각 요소의 인덱스와 값을 함께 출력해주는 기능을 한다.
+  - `enumerate(순환가능한 자료형, 시작값)` 첫 번째 인자로 순환가능한(iterable) 값을 전달하고, 두 번째 인자로 인덱스 시작 값을 지정할 수 있다. 예를 들어 1로 지정한다면 인덱스의 시작은 원래 0부터지만 0이 아닌 1로 계산하여 위의 실행결과에서 `0 Tom --> 1 Tom`으로 바뀌어 출력된다.
+  - 인덱스 시작을 0이 아닌 1로 시작하는 것이지 두 번째 요소부터 출력되는 것이 아님에 주의하자.
 
 <br>
 
