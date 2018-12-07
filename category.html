@@ -16,8 +16,23 @@ a.one:link {color:#000000;}
 a.one:visited {color:#000000;}
 a.one:hover {color:#FF5A5A;}
 
-</style>
+.site-tag a {
+    display: inline-block;
+    margin-right: 12px;
+    color: #FF5A5A;
+}
 
+</style>
+<h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Tags</h3>
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+ <span class="site-tag">
+    <a href="/tag/{{ tag | first | slugify }}/"
+        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+    </a>
+</span>
+{% endfor %}
 <hr>
 <p>
 <h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Python</h3>
