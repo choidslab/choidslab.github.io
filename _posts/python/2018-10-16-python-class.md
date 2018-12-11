@@ -6,7 +6,7 @@ date: 2018-10-15 23:00:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: python
+category: Python
 tags: [python, class, inheritance, override, Introducing Python]
 ---
 

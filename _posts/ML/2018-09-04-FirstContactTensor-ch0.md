@@ -6,7 +6,7 @@ date: 2018-09-05 14:00:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: machinelearning
+category: Machine Learning
 tags: [텐서플로 첫걸음, 0장]
 ---
 ### 0.1 딥 러닝 개념 잡기

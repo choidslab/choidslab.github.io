@@ -6,7 +6,7 @@ date: 2018-10-30 18:00:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: python
+category: Python
 tags: [python, datetime, time]
 ---
 

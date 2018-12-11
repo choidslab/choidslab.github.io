@@ -6,7 +6,7 @@ date: 2018-09-10 17:00:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: python
+category: Python
 tags: [python, generator, decorator, enumerate, Introducing Python]
 ---
 
