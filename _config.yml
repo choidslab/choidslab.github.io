@@ -143,7 +143,7 @@ excerpt_length: 50
 
 # Character used to separate site title and description in HTML document title
 # and RSS feed title
-title-separator: "-"
+title-separator: ""
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
@@ -153,6 +153,7 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
+paginate_path: '/page/:num/'
 
 kramdown:
   input: GFM
