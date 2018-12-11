@@ -402,7 +402,7 @@ footer .theme-by {
 }
 
 .blog-tags a {
-  color: {{ site.link-col }};
+  color: #999;
   text-decoration: none;
   padding: 0px 5px;
 }
