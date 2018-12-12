@@ -9,7 +9,7 @@ layout: null
 body {
   font-family: font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
-  color: #000;
+  color: #404040;
   position: relative;
   background-color: {{ site.page-col }};
   {% if site.page-img %}
@@ -781,4 +781,27 @@ td.gutter {
   color: #808080;
   font-style: italic;
   font-size: 16px;
+}
+
+/* scroll Up Button */
+.scrollUpButton {
+  display: none;
+  opacity: 0.6;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  background: #000;
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50%;
+}
+
+.scrollUpButton:hover, .scrollUpButton:focus {
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  opacity: 1;
 }
