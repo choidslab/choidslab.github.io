@@ -22,11 +22,24 @@
               </a>
             </li>
           {%- endfor -%}
+          <li>
+            |
+          </li>
+          <li>
+            <a href="//choidslab.github.io">Copyright &copy; {{ site.author.name }}</a>
+            All rights reserved.
+            &nbsp;&bull;&nbsp;
+            {{ site.time | date: '%Y' }}
+          </li>
+          <li>
+            |
+          </li>
+          <li>
+            Theme by <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+          </li>
+
         </ul>
-      <p class="copyright text-muted">
-      {{ site.author.name }}
-      &nbsp;&bull;&nbsp;
-      {{ site.time | date: '%Y' }}
+      <!-- <p class="copyright text-muted">
 
       {% if site.url-pretty %}
       &nbsp;&bull;&nbsp;
@@ -39,12 +52,12 @@
           <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
         {% endif %}
       {% endif%}
-      </p>
+      </p> -->
           <!-- Please don't remove this, keep my open source work credited :) -->
-    <p class="theme-by text-muted">
+    <!-- <p class="theme-by text-muted">
       Theme by
       <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
-    </p>
+    </p> -->
       </div>
     </div>
   </div>
