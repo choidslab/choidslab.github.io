@@ -23,8 +23,8 @@ description: ""
 
 # List of links in the navigation bar
 navbar-links:
-  #Home: "https://choidslab.github.io"
   Home: "https://choidslab.github.io"
+  Categories: "category"
   About Me: "aboutme"
   <span class="glyphicon glyphicon-search"></span>: "search"
   # Resources:
@@ -151,7 +151,7 @@ title-separator: ""
 timezone: "Asia/Seoul"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /:year/:month/:day/:title/
 paginate: 5
 paginate_path: '/page/:num/'
 

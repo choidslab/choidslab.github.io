@@ -22,14 +22,21 @@ common-js:
   <body>
 
     {% include gtm_body.html %}
-  
+
     {% include nav.html %}
 
     {{ content }}
 
     {% include footer.html %}
-  
+
     {% include footer-scripts.html %}
-  
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b854e169ee62e68"></script>
+
+      <!-- Scroll Top Button -->
+      <script type="text/javascript" src="/js/scrollUpButton.js"></script>
+      <!-- <a href="#" class="scrollUpButton">&#9650</a> -->
+      <a href="#" class="scrollUpButton"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
   </body>
 </html>
