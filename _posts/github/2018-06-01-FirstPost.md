@@ -6,7 +6,7 @@ date: 2018-06-01 14:25:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: etc
+category: Github
 tags: [github, blog]
 ---
 <p>
