@@ -16,6 +16,8 @@ body {
   background-image: url({{ site.page-img }});
   background-attachment: fixed;
   {% endif %}
+  max-width: 100%;
+  overflow-x: hidden;
 }
 p {
   line-height: 1.5;
