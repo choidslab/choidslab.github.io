@@ -6,76 +6,159 @@ use-site-title: true
 bigimg:
   - "/img/bigimg-index01.jpg" : "Vienna University Library, 2017"
 ---
-<div class="tags-expo">
-      <div class="tags-expo-list">
-        {% for tag in site.categories %}
-        <a href="/category/#{{ tag[0] | slugify }}" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ tag[0] }}</a>
-        {% endfor %}
-      </div>
-      <hr/>
-</div>
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- jquery 추가 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      .title{
+          color: #A4000B;
+          font-weight: bold;
+          cursor: pointer;
+      }
+      .date{
+        color: #BDBDBD;
+        font-size: 12px;
+      }
+      a.one:link {color:#000000;}
+      a.one:visited {color:#000000;}
+      a.one:hover {color:#A4000B;}
 
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}
+      .site-tag a {
+          display: inline-block;
+          margin-right: 12px;
+          color: #A4000B;
+      }
+
+      .category-title{
+        cursor: pointer;
+        color: #A4000B;
+        font-weight: bold;
+      }
+      .category-title:hover > h3{
+        text-decoration: underline;
+      }
+      .tags-expo-posts{
+        display: block;
+      }
+
+      </style>
+    </head>
+
+    <body>
+      <!-- New code, 2018.12 -->
+      <div class="tags-expo">
+            <div class="tags-expo-list">
+              {% for tag in site.categories %}
+              <a href="#{{ tag[0] | slugify }}" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ tag[0] }}</a>
+              {% endfor %}
+            </div>
+            <hr/>
+
+            <div class="tags-expo-section">
+              <a href="/"><h3 class="title"><span class="glyphicon glyphicon-list" aria-hidden="true"></span>&nbsp;Recent Posts</h3></a>
+              <ul class="tags-expo-posts">
+                {% for post in site.posts offset: 0 limit: 7  %}
+                <a class="one" href="{{ site.baseurl }}{{ post.url }}">
+                  <li>
+                    {{ post.title }}
+                    <font class="date">({{ post.date | date: "%b %-d, %Y" }})</font>
+                  </li>
+                </a>
+                {% endfor %}
+              </ul>
+
+              {% for tag in site.categories %}
+              <a class="category-title"><h3 id="{{ tag[0] | slugify }}"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;{{ tag[0] }}</h3></a>
+              <ul class="tags-expo-posts">
+                {% for post in tag[1] %}
+                  <a class="one" href="{{ site.baseurl }}{{ post.url }}">
+                <li>
+                  {{ post.title }}
+                <font class="date">({{ post.date | date: "%b %-d, %Y" }})</font>
+                </li>
+                </a>
+                {% endfor %}
+              </ul>
+              {% endfor %}
+            </div>
+          </div>
+
+      <!-- 숨김, 표시 전환 -->
+        <script type="text/javascript">
+          $(".category-title").click(function(){
+            if ($(this).next().css('display') === 'block'){
+              $(this).next().slideUp()
+              // $(this).children().css("color", "#393939")
+            }else{
+              $(this).next().slideDown('fast')
+              // $(this).children().css("color", "#ec4c6a")
+            }
+          })
+        </script>
+    </body>
+</html>
+
+<!-- beautiful-jekyll 원본 코드 -->
+<!-- <h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Tags</h3>
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+ <span class="site-tag">
+    <a href="/tag/{{ tag | first | slugify }}/"
+        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
     </a>
-
-    <p class="post-meta">
-      {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-
-    <div class="post-entry-container">
-      {% if post.image %}
-      <div class="post-image">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <img src="{{ post.image }}">
-        </a>
-      </div>
-      {% endif %}
-      <div class="post-entry">
-        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
-      </div>
-    </div>
-
-    {% if post.tags.size > 0 %}
-    <div class="blog-tags">
-      <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>  Tags
-      {% if site.link-tags %}
-      {% for tag in post.tags %}
-      <a href="{{ site.baseurl }}/tags#{{- tag -}}">#{{- tag -}}</a>
-      {% endfor %}
-      {% else %}
-        {{ post.tags | join: ", " }}
-      {% endif %}
-    </div>
-    {% endif %}
-
-   </article>
-  {% endfor %}
-</div>
-
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+</span>
+{% endfor %}
+<hr>
+<p>
+<h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Python</h3>
+  <ul>
+    {% for post in site.categories.python %}
+    <li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    {% endfor %}
+  </ul>
+</p>
+<p>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Machine Learning</h3>
+    <ul>
+    	{% for post in site.categories.machinelearning %}
+    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    	{% endfor %}
+    </ul>
+</p>
+<p>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;C/C++</h3>
+    <ul>
+    	{% for post in site.categories.ccplus %}
+    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    	{% endfor %}
+    </ul>
+</p>
+<p>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;git</h3>
+    <ul>
+    	{% for post in site.categories.github_blog %}
+    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    	{% endfor %}
+    </ul>
+</p>
+<p>
+  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Today I Learned</h3>
+    <ul>
+    	{% for post in site.categories.TIL %}
+    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+    	{% endfor %}
+    </ul>
+</p>
+<p>
+    <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;ETC</h3>
+      <ul>
+      	{% for post in site.categories.etc %}
+      	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
+      	{% endfor %}
+      </ul>
+</p>
+<hr> -->

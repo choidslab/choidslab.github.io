@@ -23,8 +23,8 @@ description: ""
 
 # List of links in the navigation bar
 navbar-links:
+  #Home: "https://choidslab.github.io"
   Home: "https://choidslab.github.io"
-  Categories: "category"
   About Me: "aboutme"
   <span class="glyphicon glyphicon-search"></span>: "search"
   # Resources:
