@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: DS Tech Blog
+# title: DS Tech Blog
 
 # Short description of your site
 description: ""
@@ -40,7 +40,7 @@ avatar: "/img/dschoi.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-# title-img: /path/to/image
+# title-img: "/img/dschoi.png"
 
 # --- Background colour/image options --- #
 
