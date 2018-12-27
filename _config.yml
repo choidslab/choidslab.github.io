@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "https://choidslab.github.io"
+url: "https://tech.dslab.kr"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-# title: DS Tech Blog
+title: DS 기술 블로그
 
 # Short description of your site
 description: ""
@@ -23,8 +23,8 @@ description: ""
 
 # List of links in the navigation bar
 navbar-links:
-  Home: "https://choidslab.github.io"
-  Categories: "category"
+  Home: "https://tech.dslab.kr"
+  Category: "category"
   About Me: "aboutme"
   <span class="glyphicon glyphicon-search"></span>: "search"
   # Resources:
@@ -67,7 +67,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: DooSeop
+  name: Doo-Seop Choi
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
