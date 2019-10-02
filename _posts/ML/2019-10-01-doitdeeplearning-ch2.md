@@ -125,7 +125,7 @@ np.sum(my_arr) # numpy 내장함수 sum()을 이용한 요소 합 구하기
 
 <br>
 
-#### matplotlib 기초
+### matplotlib 기초
 
   - 파이썬 데이터 시각화 라이브러리
   - 다양한 그래프를 그릴 수 있음
