@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[알고리즘]문자열 뒤집기(Python)"
+title: "[알고리즘] 문자열 뒤집기(Python)"
 subtitle: ""
 date: 2019-10-14 13:30:00 +0900
 comments: true
@@ -9,10 +9,6 @@ background: '/img/bg-index.jpg'
 category: Algorithm
 tags: [Algorithm, python]
 ---
-> `Python` 알고리즘 학습 내용 정리 
-> 더 좋은 방법이 있으면 덧글로 남겨주세요. 
-> 감사합니다.
-
 <br>
 
 ### for문을 이용한 문자열 뒤집기
@@ -48,8 +44,14 @@ def reverse_string_using_slicing(string):
 
 <br>
 
+> `Python` 알고리즘 학습 내용 정리 
+> 더 좋은 방법이 있으면 덧글로 남겨주세요. 
+> 감사합니다.
+
+<br>
+
 ---
 
 #### [Reference]
 
-[1] Google 검색
+[1] Google 검색, "파이썬 문자열 뒤집기"
