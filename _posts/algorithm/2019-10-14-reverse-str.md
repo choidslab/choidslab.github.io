@@ -39,6 +39,8 @@ def reverse_string_using_slicing(string):
 
   - python 리스트의 슬라이싱을 이용하여 문자열 뒤에서부터 출력
 
+<br>
+
 ## 결론
   - C/C++에 비해 문자열 출력이 수월함을 알 수 있음
   - Python 슬라이싱을 이용할 경우 문자열 거꾸로 출력은 식은 죽 먹기!
