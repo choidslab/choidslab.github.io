@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "문자열 뒤집기(Python)"
+title: "[알고리즘]문자열 뒤집기(Python)"
 subtitle: ""
 date: 2019-10-14 13:30:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Algorithm
-tags: [알고리즘], [문자열 뒤집기], [Python]]
+category: algorithm
+tags: [algorithm]
 ---
 > `Python` 알고리즘 학습 내용 정리 
 > 더 좋은 방법이 있으면 덧글로 남겨주세요. 
