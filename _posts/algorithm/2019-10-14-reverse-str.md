@@ -44,8 +44,8 @@ def reverse_string_using_slicing(string):
 
 <br>
 
-> `Python` 알고리즘 학습 내용 정리 
-> 더 좋은 방법이 있으면 덧글로 남겨주세요. 
+> `Python` 알고리즘 학습 내용 정리한 글입니다.<br>
+> 더 좋은 방법이 있으면 덧글로 남겨주세요.<br>
 > 감사합니다.
 
 <br>
