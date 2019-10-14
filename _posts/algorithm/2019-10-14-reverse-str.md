@@ -15,7 +15,7 @@ tags: [알고리즘], [문자열 뒤집기], [Python]]
 
 <br>
 
-## for문을 이용한 문자열 뒤집기
+### for문을 이용한 문자열 뒤집기
 
 ```python
 def reverse_string_using_for(string):
@@ -30,7 +30,7 @@ def reverse_string_using_for(string):
 
 <br>
 
-## 슬라이싱(Slicing)을 이용한 문자열 뒤집기
+### 슬라이싱(Slicing)을 이용한 문자열 뒤집기
 
 ```python
 def reverse_string_using_slicing(string):
@@ -41,7 +41,7 @@ def reverse_string_using_slicing(string):
 
 <br>
 
-## 결론
+### 결론
   - C/C++에 비해 문자열 출력이 수월함을 알 수 있음
   - Python 슬라이싱을 이용할 경우 문자열 거꾸로 출력은 식은 죽 먹기!
 
