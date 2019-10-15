@@ -13,6 +13,7 @@ tags: [Algorithm, python]
 
 ### 재귀(Recursion)를 이용한 피보나치 수열 구하기
 
+
 ```python
 def fibonacci(N):
 
@@ -30,6 +31,7 @@ def fibonacci(N):
   - `일반화: f(n) = f(n-1) + f(n-2)`
   - 재귀와 피보나치 수열에 대한 자세한 설명은 글 하단 Reference 참조
 
+<br>
 
 ### 결론
   - 재귀호출을 이용하여 문제를 편리하게 해결할 수 있음
@@ -47,5 +49,5 @@ def fibonacci(N):
 
 #### [Reference]
 
-[1] (재귀란?(Recursion))[https://ko.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/recursion]
-[2] (피보나치 수열)[https://namu.wiki/w/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%20%EC%88%98%EC%97%B4]
+[1] [재귀(Recursion)](https://ko.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/recursion)
+[2] [피보나치 수열](https://namu.wiki/w/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%20%EC%88%98%EC%97%B4)
