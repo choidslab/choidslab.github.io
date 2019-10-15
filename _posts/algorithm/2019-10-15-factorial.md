@@ -11,12 +11,13 @@ tags: [Algorithm, python]
 ---
 <br>
 
-### for문을 이용한 팩토리얼 값 구하기
 
 > 팩토리얼은 숫자 1~N까지의 총 곱셈 값을 계산하는 것을 의미<br>
 > for문과 재귀 방식으로 문제를 풀 수 있음
 
 <br>
+
+### for문을 이용한 팩토리얼 값 구하기
 
 ```python
 def factorial_using_for(num):
