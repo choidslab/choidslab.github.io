@@ -9,7 +9,6 @@ background: '/img/bg-index.jpg'
 category: Algorithm
 tags: [Algorithm, python]
 ---
-<br>
 
 ### 재귀(Recursion)를 이용한 피보나치 수열 구하기
 

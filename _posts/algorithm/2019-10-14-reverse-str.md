@@ -9,7 +9,6 @@ background: '/img/bg-index.jpg'
 category: Algorithm
 tags: [Algorithm, python]
 ---
-<br>
 
 ### for문을 이용한 문자열 뒤집기
 
