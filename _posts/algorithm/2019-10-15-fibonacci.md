@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[알고리즘] 피보나치 수열"
+title: "[알고리즘] 피보나치 수열(Python)"
 subtitle: ""
 date: 2019-10-15 10:20:00 +0900
 comments: true
