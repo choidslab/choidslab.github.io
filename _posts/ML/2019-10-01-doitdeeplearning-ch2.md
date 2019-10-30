@@ -6,8 +6,8 @@ date: 2019-10-01 18:30:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Machine Learning
-tags: [Do it! 딥러닝 입문]
+category: ML/DL
+tags: [ML/DL, Do it! 딥러닝 입문]
 ---
 > `Do it! 정직하게 코딩하며 배우는 딥러닝 입문` 책 내용을 정리한 글입니다.<br>
 > 수정해야 할 내용이 있거나 잘못된 내용이 있다면 알려주세요.
