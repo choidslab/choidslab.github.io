@@ -19,6 +19,7 @@ tags: [python, lambda, map, filter]
 pow = lambda num1, num2: num1 ** num2
 result = pow(2, 10)
 ```
+<br>
 
 ### map
 ---
@@ -32,6 +33,7 @@ def increment(x):
 
 list(map(increment, [1, 2, 3, 4]))
 ```
+<br>
 
 ### filter
 ---
