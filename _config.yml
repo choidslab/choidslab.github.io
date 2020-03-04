@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: DSLab Tech
+title: DS Lab
 
 # Short description of your site
 description: ""
@@ -75,7 +75,7 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
 #  rss: false
-  email: "choids.lab@gmail.com"
+  email: "dslab0915@gmail.com"
   facebook: dooseop.choi
   github: choidslab
   #twitter: daattali
