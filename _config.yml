@@ -14,7 +14,11 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
+<<<<<<< HEAD
 title: DS Lab
+=======
+title: DS
+>>>>>>> 17f2affd3b40c0d493e77f22356b3bdaaa9e4b94
 
 # Short description of your site
 description: ""
@@ -152,7 +156,7 @@ timezone: "Asia/Seoul"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
-paginate: 6
+paginate: 7
 paginate_path: '/page/:num/'
 
 kramdown:

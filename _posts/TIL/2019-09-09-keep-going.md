@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2019.09.10(화)
+title: "[TIL] 2019.09.10(화)"
 subtitle: ""
 date: 2019-09-10 21:10:00 +0900
 comments: true
