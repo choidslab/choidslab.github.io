@@ -8,3 +8,7 @@ gem 'jekyll-paginate'
 
 # admin site
 gem 'jekyll-admin', group: :jekyll_plugins
+
+# activesupport
+gem 'activesupport'
+gem 'i18n'
