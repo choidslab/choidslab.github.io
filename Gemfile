@@ -12,3 +12,6 @@ gem 'jekyll-admin', group: :jekyll_plugins
 # activesupport
 gem 'activesupport'
 gem 'i18n'
+
+# jekyll
+gem "jekyll", "~> 3.6"
