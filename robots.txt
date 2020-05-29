@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://choidslab.github.io/
+Sitemap: https://choidslab.github.io/sitemap.xml
