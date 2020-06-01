@@ -3,7 +3,7 @@ layout: page
 title: About me
 subtitle: "Guard your heart, Proverbs 4:23"
 bigimg:
-  - "/img/aboutme.jpg" : "Vienna State Opera, 2017"
+  - "/img/aboutme3.jpg" : "Rotes Rathaus, Berlin, 2020"
 ---
 
 ---
@@ -12,11 +12,15 @@ bigimg:
 블로그를 통해 최근 집중해서 공부하고 있는 AI를 비롯해 소프트웨어 개발, 정보보안 등 컴퓨터 사이언스 관련 학습 내용을 기록하고 일상의 경험을 공유하며 
 많은 분들과 소통하며 함께 성장해 나가기 위해 본 블로그를 운영하고 있습니다. :)
 
+---
+
 ### Interests
   - ML/DL
   - Computer Vision
   - Python
   - Information Security(Network Security)
+
+---
 
 ### Profile
   - dslab0915@gmail.com
@@ -38,9 +42,12 @@ bigimg:
   - MS, Department of Computer Science, Hanyang University
   - BS, Department of Computer Engineering, Myongji University
 
+---
+
 ### Publication 
   - 작성중... 
 
+---
 
 ### Certification
   - 정보보안기사(2018.06)
