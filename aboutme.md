@@ -3,7 +3,7 @@ layout: page
 title: About me
 subtitle: "Guard your heart, Proverbs 4:23"
 bigimg:
-  - "/img/aboutme2.jpg" : "Berliner Dom, Berlin, 2020"
+  - "/img/germany-berliner-dom.jpg" : "Berliner Dom, Berlin, 2020"
 ---
 
 ---
