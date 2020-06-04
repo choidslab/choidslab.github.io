@@ -15,3 +15,5 @@ gem 'i18n'
 
 # jekyll
 gem "jekyll", "~> 3.6"
+
+gem 'wdm', '>= 0.1.0'
