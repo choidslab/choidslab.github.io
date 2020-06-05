@@ -24,8 +24,8 @@ description: ""
 
 # List of links in the navigation bar
 navbar-links:
-  Home: "https://tech.dslab.kr"
   About: "aboutme"
+  Posts: "index.html"
   Category: "category"
   <span class="glyphicon glyphicon-search"></span>: "search"
   # Resources:
