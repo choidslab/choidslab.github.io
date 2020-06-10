@@ -10,12 +10,12 @@ category: Algorithm
 tags: [Algorithm, python]
 ---
 
-> 팩토리얼은 숫자 1~N까지의 총 곱셈 값을 계산하는 것을 의미<br>
-> for문과 재귀 방식으로 문제를 풀 수 있음
+> Factorial은 숫자 1~N까지의 총 곱을 계산<br>
+반복문과 재귀(Recursion), 그리고 math 모듈을 이용하여 계산할 수 있다.
 
 <br>
 
-### for문을 이용한 팩토리얼 값 구하기
+#### for문을 이용한 factorial
 
 ```python
 def factorial_using_for(num):
@@ -29,22 +29,23 @@ def factorial_using_for(num):
 
 <br>
 
-### 재귀를 이용한 팩토리얼 값 구하기
+#### 재귀(Recursion)를 이용한 factorial
 
 ```python
-def factorial_using_for(num):
-    fact = 1
-
-    for i in range(1, num+1):
-        fact *= i
-
-    return fact
+def recursive_fact(num):
+    if num > 1:
+        return num * recursive_fact(num-1)
+    elif num == 1 or num == 0:
+        return 1
 ```
 
-<br>
+#### math 모듈을 이용한 factorial
+```python
+import math
 
-> `알고리즘` 학습 내용을 정리한 글입니다.<br>
-> 더 좋은 방법이나 정보가 있으면 덧글로 남겨주세요.<br>
-> 감사합니다!
+math.factorial(5) # 결과: 120
+math.factorial(1) # 결과: 1
+math.factorial(3) # 결과: 6
+```
 
 <br>
