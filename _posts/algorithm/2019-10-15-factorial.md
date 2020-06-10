@@ -39,7 +39,10 @@ def recursive_fact(num):
         return 1
 ```
 
+<br>
+
 #### math 모듈을 이용한 factorial
+
 ```python
 import math
 
