@@ -38,7 +38,7 @@ bigimg:
 
 ### :mortar_board: Education
   - M.S. Department of Computer Science, Hanyang University <font size="2px">(2015-2017)</font>
-  - B.S. Department of Computer Engineering, Myongji University <font size="2px">(2006-2013)</font>
+  - B.E. Department of Computer Engineering, Myongji University <font size="2px">(2006-2013)</font>
 
 ---
 
