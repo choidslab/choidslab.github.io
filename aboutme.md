@@ -23,6 +23,7 @@ bigimg:
   - :email: dslab0915@gmail.com
   - :pushpin: [Github](https://github.com/choidslab)
   - :pushpin: [Naver Blog](https://blog.dslab.kr)
+  - :pushpin: [Linked in](https://www.linkedin.com/in/dooseop-choi-23206871/)
 
 ---
 
