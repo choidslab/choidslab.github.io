@@ -26,7 +26,7 @@ description: ""
 
 # List of links in the navigation bar
 navbar-links:
-  About: "aboutme"
+  About me: "aboutme"
   Posts: "index.html"
   Category: "category"
   <span class="glyphicon glyphicon-search"></span>: "search"
@@ -155,7 +155,7 @@ timezone: "Asia/Seoul"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
-paginate: 12
+paginate: 10
 paginate_path: '/page/:num/'
 
 kramdown:
