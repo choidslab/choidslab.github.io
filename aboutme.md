@@ -20,10 +20,9 @@ bigimg:
 ---
 
 ### :sunglasses: Contact
-  - :email: dslab0915@gmail.com
-  - :pushpin: [Github](https://github.com/choidslab)
-  - :pushpin: [Naver Blog](https://blog.dslab.kr)
-  - :pushpin: [LinkedIn](https://www.linkedin.com/in/dooseop-choi-23206871/)
+  - dslab0915@gmail.com
+  - [Github](https://github.com/choidslab)
+  - [LinkedIn](https://www.linkedin.com/in/dooseop-choi-23206871/)
 
 ---
 
