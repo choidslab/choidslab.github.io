@@ -8,18 +8,19 @@ bigimg:
 
 ---
 
-> 블로그를 통해 Computer Scienece 학습 내용과 경험을 꾸준히 기록하고 공유하기 위해 노력하고 있습니다. 많은 분들과 소통하고, 함께 성장해 나가고 싶습니다. :smile:
+### :eyes: About me 
+> Python 개발을 좋아합니다. 블로그를 통해 Computer Scienece 학습 내용과 다양한 경험을 꾸준히 기록하기 위해 노력하고 있습니다. 정보 공유를 통해 많은 분들과 함께 성장해 나갈 수 있다고 믿고 있습니다. :smile:
 
 ---
 
-### :dart: Current Interests
+### :bulb: Current Interests
   - Machine Learning / Deep Learning
   - Python Development
-  - Information Security(Network Security)
+  - Information Security
 
 ---
 
-### :sunglasses: Contact
+### :email: Contact
   - dslab0915@gmail.com
   - [Github](https://github.com/choidslab)
   - [LinkedIn](https://www.linkedin.com/in/dooseop-choi-23206871/)
@@ -58,12 +59,15 @@ bigimg:
 
 ---
 
-### :scroll: Certification & Independent Education
+### <i class="fas fa-id-badge"></i> :scroll: Certification & Independent Education
+  - [Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning](https://coursera.org/share/e79ff2f8454e92de13cca35641158bcd) - Coursera <font size="2px">(2020.09)</font>
+  - [Byte Degree - Data Science 4기](https://www.broof.io/search/7f221d8f) - Fast Campus <font size="2px">(2020.08)</font>
   - [프로그래밍, 데이터 과학을 위한 파이썬 입문](https://drive.google.com/open?id=1nR7_vnOlPybom__wC3RLqdbXUrmSSVgw) - Inflearn <font size="2px">(2020.03)</font>
   - [Python for Everybody(PY4E)](http://www.edwith.org/certificate/A20181126-360949?langCode=ko) - edwith <font size="2px">(2018.11)</font>
   - 정보보안기사 <font size="2px">(2018.06)</font>
   - 정보보안산업기사 <font size="2px">(2018.06)</font>
   - 정보처리기사 <font size="2px">(2013.06)</font>
-  - 리눅스마스터 <font size="2px">2급(2010.12)</font>
- 
----
+  - 리눅스마스터 2급 <font size="2px">(2010.12)</font>
+
+<br>
+<div style="text-align: right">Last Modified Data: 2020.09.27</div>
