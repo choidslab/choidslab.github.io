@@ -9,7 +9,7 @@ bigimg:
 ---
 
 ### :eyes: About me 
-> Python 개발을 좋아합니다. 블로그를 통해 Computer Scienece 학습 내용과 다양한 경험을 꾸준히 기록하기 위해 노력하고 있습니다. 정보 공유를 통해 많은 분들과 함께 성장해 나갈 수 있다고 믿고 있습니다. :smile:
+> Python 개발을 좋아하고 특히 작은 자동화 도구를 개발하는 것을 좋아합니다. :) 다양한 경험과 학습내용을 꾸준히 기록하고 공유하며 정보 공유를 통해 많은 분들과 함께 성장해 나갈 수 있다고 믿고 있습니다. 현재는 대학교 정보보호팀에서 `정보보안 엔지니어(Security Engineer)`로 근무하고 있으며 최근에는 AI와 Python 공부에 집중하고 있습니다. :smile:
 
 ---
 
@@ -70,4 +70,4 @@ bigimg:
   - 리눅스마스터 2급 <font size="2px">(2010.12)</font>
 
 <br>
-<div style="text-align: right">Last Modified Data: 2020.09.27</div>
+<div style="text-align: right">Last Modified Data: 2020. 10. 05</div>
