@@ -2,8 +2,7 @@
 layout: page
 title: About me
 subtitle: "Guard your heart, Proverbs 4:23"
-bigimg:
-  - "/img/austria-vienna-university.jpg" : "Vienna University, Austria(2017)"
+cover-img: "https://images.unsplash.com/photo-1528038719194-6f72b64cf78f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
 ---
 
 ### About me 
