@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Category
-bigimg: 
-  - "/img/germany-dresden.jpg" : "Dresden, Germany(2019-2020)"
 ---
 <!DOCTYPE html>
 <html>
@@ -12,12 +10,12 @@ bigimg:
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       .title{
-          color: #A4000B;
+          color: #000000;
           font-weight: bold;
           cursor: pointer;
       }
       .date{
-        color: #BDBDBD;
+        color: #505050;
         font-size: 12px;
       }
       a.one:link {color:#000000;}
@@ -32,11 +30,13 @@ bigimg:
 
       .category-title{
         cursor: pointer;
-        color: #A4000B;
+        color: #000000;
         font-weight: bold;
       }
       .category-title:hover > h3{
-        text-decoration: underline;
+        /* text-decoration: underline; */
+		color: #A4000B;
+
       }
       .tags-expo-posts{
         display: block;
@@ -55,7 +55,7 @@ bigimg:
             </div>
             <hr/>
 
-            <div class="tags-expo-section">
+            <!-- <div class="tags-expo-section">
               <a href="/"><h3 class="title"><span class="glyphicon glyphicon-list" aria-hidden="true"></span>&nbsp;Recent Posts</h3></a>
               <ul class="tags-expo-posts">
                 {% for post in site.posts offset: 0 limit: 7  %}
@@ -66,7 +66,7 @@ bigimg:
                   </li>
                 </a>
                 {% endfor %}
-              </ul>
+              </ul> -->
 
               {% for tag in site.categories %}
               <a class="category-title"><h3 id="{{ tag[0] | slugify }}"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;{{ tag[0] }}</h3></a>
@@ -98,65 +98,3 @@ bigimg:
         </script>
     </body>
 </html>
-
-<!-- beautiful-jekyll 원본 코드 -->
-<!-- <h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Tags</h3>
-{% assign tags = site.tags | sort %}
-{% for tag in tags %}
- <span class="site-tag">
-    <a href="/tag/{{ tag | first | slugify }}/"
-        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
-            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
-    </a>
-</span>
-{% endfor %}
-<hr>
-<p>
-<h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Python</h3>
-  <ul>
-    {% for post in site.categories.python %}
-    <li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
-    {% endfor %}
-  </ul>
-</p>
-<p>
-  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Machine Learning</h3>
-    <ul>
-    	{% for post in site.categories.machinelearning %}
-    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
-    	{% endfor %}
-    </ul>
-</p>
-<p>
-  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;C/C++</h3>
-    <ul>
-    	{% for post in site.categories.ccplus %}
-    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
-    	{% endfor %}
-    </ul>
-</p>
-<p>
-  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;git</h3>
-    <ul>
-    	{% for post in site.categories.github_blog %}
-    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
-    	{% endfor %}
-    </ul>
-</p>
-<p>
-  <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;Today I Learned</h3>
-    <ul>
-    	{% for post in site.categories.TIL %}
-    	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
-    	{% endfor %}
-    </ul>
-</p>
-<p>
-    <h3 class="title"><h3 class="title"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;&nbsp;ETC</h3>
-      <ul>
-      	{% for post in site.categories.etc %}
-      	<li><a class="one" href="{{ post.url }}">{{ post.title }}</a>   <font class="date">({{ post.date | date: "%B %-d, %Y" }})</font></li>
-      	{% endfor %}
-      </ul>
-</p>
-<hr> -->
