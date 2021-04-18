@@ -18,8 +18,8 @@ cover-img: "https://images.unsplash.com/photo-1528038719194-6f72b64cf78f?ixid=Mn
   - `CERT`, Second Operational Command(육군 제2작전사령부), Republic Of Korea Army <font size="2px">(2009-2010)</font>
 
 ### Education
-  - M.S. Department of Computer Science, Hanyang University <font size="2px">(2015-2017)</font>
-  - B.E. Department of Computer Engineering, Myongji University <font size="2px">(2006-2013)</font>
+  - 한양대학교 일반대학원 컴퓨터소프트웨어학과 석사 졸업, Software Security Lab <font size="2px">(2015-2017)</font>
+  - 명지대학교 컴퓨터공학과 졸업 <font size="2px">(2006-2013)</font>
 
 ### Publications
   - HTTP 요청 패킷 분석 기반의 클라우드 웹 서비스 사용자에 대한 지속적인 인증 방법, 석사 학위논문 <font size="2px">(2017.08)</font><br>
