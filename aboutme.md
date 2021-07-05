@@ -9,7 +9,7 @@ cover-img: "https://images.unsplash.com/photo-1528038719194-6f72b64cf78f?ixid=Mn
 > Python 개발을 좋아하고 특히 작은 자동화 도구를 개발하는 것을 좋아합니다. 다양한 경험과 학습내용을 꾸준히 기록하고 공유하며 정보 공유를 통해 많은 분들과 함께 성장해 나갈 수 있다고 믿고 있습니다. 최근에는 Python 개발, AI(Machine Learning, Deep Learning) 기반 보안을 연구하고 있습니다. :)
 
 ### Work Experience
-  - `Security Research Engineer`, Security Lab, Valuesight <font size="2px">(2021.03-Present)</font>
+  - `Security Research Engineer`, Security Lab, Valuesight <font size="2px">(2021.03-2021.06)</font>
   - `Security Engineer`, Information Security Team, Myongji University <font size="2px">(2019.09-2020.11)</font>
   - `AI Research Engineer`, AI Lab, Genesis Lab <font size="2px">(2019.02-2019.08)</font>
   - `Student Researcher`, Software Security Lab, Hanyang University <font size="2px">(2015.09-2017.08)</font>
