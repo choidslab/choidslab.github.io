@@ -6,15 +6,15 @@
 # --- Required options --- #
 
 # Name of website
-title: DS Lab
+title: DS Tech Blog
 
 # Your name to show in the footer
-author: dschoi
+author: DS.Choi
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Home: "index.html"
+  Posts: "index.html"
   About Me: "aboutme"
   Category: "category"
   # Author's home: "https://deanattali.com"
