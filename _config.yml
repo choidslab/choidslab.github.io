@@ -9,7 +9,7 @@
 title: DS Lab
 
 # Your name to show in the footer
-author: Tim DSChoi
+author: dschoi
 
 # --- List of links in the navigation bar --- #
 
@@ -39,7 +39,6 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "dslab0915@gmail.com"
-  facebook: dooseop.choi
   github: choidslab
   # twitter: daattali
   # patreon: DeanAttali
