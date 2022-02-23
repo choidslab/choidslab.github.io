@@ -29,7 +29,7 @@ tags: [ML/DL, Do it! 딥러닝 입문]
 
 A. 구글 계정으로 로그인  
   - https://colab.research.google.com
-  - ![welcome]({{site.url}}/post_img/ML/ch2/welcome_colab.png)
+  - ![welcome]({{site.url}}/assets/post_img/ML/ch2/welcome_colab.png)
 
 B. 텍스트 셀 편집
   - 코랩 노트북은 2가지(텍스트 셀, 코드 셀)
@@ -45,11 +45,11 @@ C. 셀 추가
 
 ### 코랩 노트북 관리
 
-![save_notebook]({{site.url}}/post_img/ML/ch2/save_notebook.png)
+![save_notebook]({{site.url}}/assets/post_img/ML/ch2/save_notebook.png)
   - 코랩에서 작성한 노트북은 로그인한 구글 계정의 `구글 드라이브`에 저장
   - [파일] -> [드라이브에 사본 저장] 선택
 
-![create_notebook]({{site.url}}/post_img/ML/ch2/create_notebook.png)
+![create_notebook]({{site.url}}/assets/post_img/ML/ch2/create_notebook.png)
   - 구글 드라이브에서 Colab 노트북 생성은 [마우스 우클릭] -> [Google Colaboratory] 선택
 
 <br>
@@ -143,7 +143,7 @@ plt.show()  # 그래프를 그려줌
 ```
 
 ### 결과
-![선 그래프]({{site.url}}/post_img/ML/ch2/linear.png)
+![선 그래프]({{site.url}}/assets/post_img/ML/ch2/linear.png)
 
 <br>
 
@@ -155,7 +155,7 @@ plt.show()
 ```
 
 ### 결과
-![산점도 그래프1]({{site.url}}/post_img/ML/ch2/scatter1.png)
+![산점도 그래프1]({{site.url}}/assets/post_img/ML/ch2/scatter1.png)
 
 <br>
 
@@ -169,7 +169,7 @@ plt.show()
 ```
 
 ### 결과
-![산점도 그래프2]({{site.url}}/post_img/ML/ch2/scatter2.png)
+![산점도 그래프2]({{site.url}}/assets/post_img/ML/ch2/scatter2.png)
 
 <br>
 
