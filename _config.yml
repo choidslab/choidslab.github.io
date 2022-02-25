@@ -9,14 +9,18 @@
 title: DS Tech Blog
 
 # Your name to show in the footer
-author: DS.Choi
+author: DS Lab
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Posts: "index.html"
   About Me: "aboutme"
-  Category: "category"
+  Posts: "index.html"
+  Category: 
+    - Dev: "/category/dev"
+    - CSE: "/category/cse"
+    - Artificail Intelligence: "/category/ai"
+    - Think: "/category/think"
   # Author's home: "https://deanattali.com"
 
 # --- Logo --- #
@@ -38,7 +42,7 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "dslab0915@gmail.com"
+  email: "dev.dschoi@gmail.com"
   github: choidslab
   # twitter: daattali
   # patreon: DeanAttali
