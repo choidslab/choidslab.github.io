@@ -6,7 +6,7 @@ date: 2019-10-30 22:30:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Python
+category: dev
 tags: [python, lambda, map, filter]
 ---
 

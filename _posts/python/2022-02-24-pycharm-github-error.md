@@ -6,7 +6,7 @@ date: 2022-02-24 08:00:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Python
+category: dev
 tags: [python, pycharm, ide, github, error]
 ---
 

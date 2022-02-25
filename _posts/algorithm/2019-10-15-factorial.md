@@ -6,7 +6,7 @@ date: 2019-10-15 11:40:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Algorithm
+category: cse
 tags: [Algorithm, python]
 ---
 

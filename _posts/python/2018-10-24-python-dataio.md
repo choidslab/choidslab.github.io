@@ -6,7 +6,7 @@ date: 2018-10-24 18:00:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Python
+category: dev
 tags: [python, write(), read(), readline(), readlines()]
 ---
 

@@ -6,7 +6,7 @@ date: 2019-09-10 21:30:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Python
+category: dev
 tags: [python, youtube_dl]
 ---
 

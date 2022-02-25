@@ -6,7 +6,7 @@ date: 2018-09-10 13:00:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Python
+category: dev
 tags: [python, function, Introducing Python]
 ---
 

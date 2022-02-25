@@ -6,7 +6,7 @@ date: 2018-08-28 12:10:00 +0900
 comments: true
 author: DSLab
 background: '/img/bg-index.jpg'
-category: Github
+category: dev
 tags: [github, Symlink]
 ---
 
