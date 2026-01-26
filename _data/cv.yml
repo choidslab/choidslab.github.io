@@ -2,96 +2,102 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Doo-Seop Choi
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. Candidate, Computer Science
+      institution: Hanyang University, Seoul, South Korea
+      year: 2022.03 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - Completed Ph.D. coursework in Computer Science.
+        - Performed research on AI-based Network Intrusion Detection.
+        - Performed research on AI-based Malware Analysis, with a focus on document-based malware.
+    
+    - title: Master of Science (MS), Department of Computer and Software
+      institution: Hanyang University, Seoul, South Korea
+      year: 2015 - 2017
+
+    - title: Bachelor of Engineering (BE), Computer Engineering
+      institution: Myongji University, Yongin, South Korea
+      year: 2006 - 2013
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Security Researcher
+      institution: waiker, Inc., Seoul, South Korea (Full-time)
+      year: 2021.03 - 2021.06
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Collected and analyzed security data from cloud infrastructure (AWS).
+        - Developed and implemented a large-scale security log data processing system using Python3, ELK Stack, and WAZUH open-source.
+        - Investigated security technologies based on Machine Learning and Deep Learning and co-authored academic research papers.
+
+    - title: Information Security Engineer
+      institution: Myongji University, Yongin, Gyeonggi, South Korea (Full-time)
+      year: 2019.09 - 2020.11
       description:
-        - Description 1.
-        - Description 2.
+        - Developed network vulnerability assessment tools using Python.
+        - Operated and analyzed logs for Data Loss Prevention (DLP) security solutions.
+        - Analyzed and responded to security incidents for the Ministry of Education Cyber Security Center (ECSC).
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: AI Research Engineer
+      institution: Genesis Lab, Inc., Seoul, South Korea (Full-time)
+      year: 2019.02 - 2019.08
       description:
+        - Conducted AI research projects related to AI interview software.
+        - Developed video data crawling tools for training facial expression analysis models (Python3, BeautifulSoup4, YouTube_DL).
+        - Developed preprocessing modules for training datasets (OpenCV, ffmpeg, pysrt, mtcnn).
+        - Implemented encryption and decryption modules to protect collected video data (Python, SHA256).
+        - Authored technical research proposals and project reports.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Student Researcher
+      institution: Hanyang University, Seoul, South Korea (Full-time)
+      year: 2015.09 - 2017.08
+      description:
+        - Conducted a research project on classifying normal and abnormal users using network traffic data and machine learning algorithms.
+        - Developed feature extraction and preprocessing tools for network packet analysis.
+        - Performed binary classification of benign and malicious traffic using Weka.
+        - Explored authentication feasibility based on traffic classification for a National Security Research Institute (NSR) project.
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Security Software Engineer
+      institution: nSecure Co., Ltd., Gangnam-gu, Seoul, South Korea (Full-time)
+      year: 2014.12 - 2015.06
+      description:
+        - Provided technical support for CA Identity Manager (Integrated Account Management Solution).
+        - Supported financial institution data centers (Kookmin Bank).
+        - Tested and validated Integrated Account Management (IAM) solutions.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: Security Software Engineer
+      institution: Future Systems, Pangyo, Seongnam, South Korea (Internship)
+      year: 2013.10 - 2014.03
+      description:
+        - Performed black-box functional testing of firewall software and analyzed network traffic using Wireshark.
+        - Reported software defects using Mantis and tested systems in VMware-based environments.
+        - Conducted firewall throughput measurements and performance evaluation for network security solutions.
+
+    - title: Network Security Engineer
+      institution: WINS Co., Ltd., Seongnam, South Korea (Internship)
+      year: 2012.12 - 2013.01
+      description:
+        - Operated and managed Intrusion Prevention Systems (IPS), including packet and log analysis.
+        - Performed system installation and testing in Linux environments.
+
+    - title: Cybersecurity (CERT Team)
+      institution: Republic of Korea Army, Daegu, South Korea
+      year: 2009.02 - 2010.12
+      description:
+        - Served in the CERT Team (Computer Emergency Response Team), 2nd Operations Command.
+        - Performed network traffic monitoring and APC (AhnLab Policy Center) antivirus monitoring.
+        - Conducted Information Operations Condition (Infocon) procedures.
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Research Topics
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - AI-applied Cybersecurity
+        - AI-driven Threats Detection
+        - Malware Detection
+        - Intrusion Detection

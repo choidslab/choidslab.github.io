@@ -1,9 +1,15 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+Elsevier:
+  url: https://www.sciencedirect.com/
+  color: "#FF6A00"
 
-"PhysRev":
-  url: https://journals.aps.org/
+MDPI:
+  url: https://www.mdpi.com/
+  color: "#0EA5E9"
 
-"Vision":
-  color: "#009f36"
+KIPS:
+  url: https://www.kips.or.kr/
+  color: "#16A34A"
+
+KINGPC:
+  url: https://www.kingpc.or.kr/
+  color: "#8B5CF6"
