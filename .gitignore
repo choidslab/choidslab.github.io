@@ -12,3 +12,7 @@ node_modules/
 vendor
 .idea
 .venv
+
+# Claude Code practice notes (local only)
+claude_code_1단계_실습계획.md
+claude_code_cli_실습_아인슈타인아이콘제거.md
