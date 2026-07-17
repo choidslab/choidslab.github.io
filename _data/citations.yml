@@ -1,3 +1,63 @@
 metadata:
-  last_updated: '1970-01-01'
-papers: {}
+  last_updated: '2026-07-17'
+papers:
+  YTLlDpgAAAAJ:0EnyYjriUFMC:
+    citations: 0
+    title: Windows Malware Family Dataset Construction and Classification
+    year: '2025'
+  YTLlDpgAAAAJ:2osOgNQ5qMEC:
+    citations: 4
+    title: 'Image-based malicious network traffic detection framework: Data-centric approach'
+    year: '2025'
+  YTLlDpgAAAAJ:9yKSN-GCB0IC:
+    citations: 0
+    title: Evasive PDF Malware Detection Based on Deep Learning and CAPE Sandbox
+    year: '2024'
+  YTLlDpgAAAAJ:LkGwnXOMwfcC:
+    citations: 0
+    title: "Android Automotive OS \uCC28\uB7C9\uC744 \uC704\uD55C \uD074\uB77C\uC6B0\uB4DC \uAE30\uBC18 \uD1B5\uD569 \uBCF4\uC548 \uC18C\uD504\uD2B8\uC6E8\uC5B4 \uD504\uB808\uC784\uC6CC\uD06C \uC124\uACC4"
+    year: '2025'
+  YTLlDpgAAAAJ:Se3iqnhoufwC:
+    citations: 0
+    title: A Comparative Study of Feature Importance Algorithms and Feature Selection for Static Feature-Based Ransomware Detection
+    year: '2025'
+  YTLlDpgAAAAJ:Tyk-4Ss8FVUC:
+    citations: 0
+    title: "\uB124\uD2B8\uC6CC\uD06C \uD328\uD0B7 \uBD84\uC11D \uAE30\uBC18\uC758 \uD074\uB77C\uC6B0\uB4DC \uC6F9 \uC0AC\uC6A9\uC790 \uC778\uC99D \uBC29\uBC95 \uC5F0\uAD6C"
+    year: '2016'
+  YTLlDpgAAAAJ:UebtZRa9Y70C:
+    citations: 0
+    title: 'Machine learning-based detection method for malicious PDF files: A temporal classification approach'
+    year: '2025'
+  YTLlDpgAAAAJ:W7OEmFMy1HYC:
+    citations: 0
+    title: Detection Method for the Vulnerability of Intent Security in Android
+    year: '2016'
+  YTLlDpgAAAAJ:WF5omc3nYNoC:
+    citations: 0
+    title: A Study on BERT and LSTM-based Ransomware family classification methods using User-defined functions
+    year: '2024'
+  YTLlDpgAAAAJ:Y0pCki6q_DkC:
+    citations: 0
+    title: "\uB124\uD2B8\uC6CC\uD06C \uD2B8\uB798\uD53D \uBD84\uC11D\uC744 \uC774\uC6A9\uD55C \uC0AC\uC6A9\uC790 \uD589\uC704\uAE30\uBC18\uC758 \uD074\uB77C\uC6B0\uB4DC \uC6F9 \uC11C\uBE44\uC2A4 \uC0AC\uC6A9\uC790 \uC778\uC99D \uBC29\uBC95 \uC5F0\uAD6C"
+    year: '2016'
+  YTLlDpgAAAAJ:YsMSGLbcyi4C:
+    citations: 0
+    title: "\uBCF4\uC548 \uC624\uD508\uC18C\uC2A4\uB97C \uD65C\uC6A9\uD55C \uD6A8\uC728\uC801\uC778 \uD074\uB77C\uC6B0\uB4DC \uBCF4\uC548 \uB370\uC774\uD130 \uBD84\uC11D \uBC29\uBC95 \uC5F0\uAD6C"
+    year: '2021'
+  YTLlDpgAAAAJ:eQOLeE2rZwMC:
+    citations: 0
+    title: "\uB79C\uC12C\uC6E8\uC5B4 \uC554\uD638\uD654 \uC54C\uACE0\uB9AC\uC998 \uBD84\uC11D \uC5F0\uAD6C"
+    year: '2024'
+  YTLlDpgAAAAJ:roLk4NBRz8UC:
+    citations: 0
+    title: A Comprehensive Performance Evaluation of a Ransomware Detection Model Based on Feature Importance Analysis
+    year: '2025'
+  YTLlDpgAAAAJ:ufrVoPGSRksC:
+    citations: 0
+    title: A Study on Machine Learning-Based Ransomware Classification methods using Optimized Feature Selection
+    year: '2024'
+  YTLlDpgAAAAJ:zYLM7Y9cAGgC:
+    citations: 0
+    title: "HTTP \uC694\uCCAD \uD328\uD0B7 \uBD84\uC11D \uAE30\uBC18\uC758 \uD074\uB77C\uC6B0\uB4DC \uC6F9 \uC11C\uBE44\uC2A4 \uC0AC\uC6A9\uC790\uC5D0 \uB300\uD55C \uC9C0\uC18D\uC801\uC778 \uC778\uC99D \uBC29\uBC95: Continuous authentication method for cloud web service users based on HTTP request packet analysis"
+    year: '2017'
