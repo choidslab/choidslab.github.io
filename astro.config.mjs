@@ -7,6 +7,8 @@ export default defineConfig({
   base: '/',
   trailingSlash: 'ignore',
   integrations: [sitemap()],
+  // Astro Dev Toolbar (dev-mode only overlay) — hidden per preference.
+  devToolbar: { enabled: false },
   markdown: {
     shikiConfig: {
       themes: {
