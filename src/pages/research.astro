@@ -1,0 +1,181 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config/site';
+import { researchAreas } from '../data/research';
+
+const description = `Research areas of ${SITE.siteName}: AI-based malware detection, LLM-driven security analysis, and trustworthy AI for security.`;
+---
+
+<Base title="Research" description={description}>
+  <section class="section">
+    <div class="container">
+      <header class="page-head">
+        <span class="kicker">// RESEARCH</span>
+        <h1>Research</h1>
+        <p class="intro">
+          My research sits at the intersection of artificial intelligence and
+          cybersecurity — building detection systems that learn, explaining
+          what they learn, and making sure they can be trusted. The work is
+          organized around three pillars: detecting malware that hides in
+          everyday documents, using large language models to analyze threats
+          the way a human analyst would, and hardening the AI itself against
+          the adversaries it faces.
+        </p>
+      </header>
+
+      <div class="areas">
+        {
+          researchAreas.map((area) => (
+            <article class="area card" id={area.id}>
+              <div class="area-index" aria-hidden="true">
+                <span class="index-num">{area.index}</span>
+                <span class="index-rule" />
+              </div>
+              <div class="area-body">
+                <h2>{area.title}</h2>
+                <p class="area-short">{area.short}</p>
+                <p class="area-desc">{area.description}</p>
+                <ul class="keywords" aria-label={`Keywords for ${area.title}`}>
+                  {area.keywords.map((kw) => (
+                    <li>
+                      <span class="tag">{kw}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-head {
+    max-width: var(--prose-width);
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .intro {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0;
+  }
+
+  .areas {
+    display: grid;
+    gap: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .area {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(1.25rem, 3.5vw, 2.5rem);
+    padding: clamp(1.4rem, 3.5vw, 2.4rem);
+    /* anchor offset so #id links don't hide behind the sticky header */
+    scroll-margin-top: 5.5rem;
+  }
+
+  .area-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .index-num {
+    font-family: var(--font-mono);
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    padding-top: 0.25rem;
+  }
+
+  .index-rule {
+    flex: 1;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--border-strong), transparent);
+  }
+
+  .area-body h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .area-short {
+    color: var(--text-strong);
+    font-weight: 550;
+    margin-bottom: 0.9rem;
+  }
+
+  .area-desc {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    max-width: 60ch;
+  }
+
+  .keywords {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  /* wide viewports: use the right side of the card — description left,
+     keywords stacked in a bordered right column */
+  @media (min-width: 900px) {
+    .area-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 15rem;
+      grid-template-areas:
+        'title title'
+        'short short'
+        'desc  keys';
+      column-gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: start;
+    }
+    .area-body h2 {
+      grid-area: title;
+    }
+    .area-short {
+      grid-area: short;
+    }
+    .area-desc {
+      grid-area: desc;
+      margin-bottom: 0;
+    }
+    .keywords {
+      grid-area: keys;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      border-left: 1px solid var(--border);
+      padding-left: clamp(1.2rem, 2vw, 1.8rem);
+      align-self: stretch;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .area {
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+    .area-index {
+      flex-direction: row;
+      align-items: center;
+    }
+    .index-num {
+      padding-top: 0;
+    }
+    .index-rule {
+      height: 1px;
+      width: auto;
+      flex: 1;
+      background: linear-gradient(to right, var(--border-strong), transparent);
+    }
+  }
+</style>

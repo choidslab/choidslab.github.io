@@ -1,0 +1,258 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, AUTHOR_ME } from '../config/site';
+import { publications, type Publication } from '../data/publications';
+
+const description = `Publications by ${SITE.siteName} — international and domestic journal papers on AI-applied cybersecurity, malware detection, and network security.`;
+
+const groups: { label: string; type: Publication['type']; items: Publication[] }[] = [
+  {
+    label: 'International Journals',
+    type: 'international-journal',
+    items: publications.filter((p) => p.type === 'international-journal'),
+  },
+  {
+    label: 'Domestic Journals',
+    type: 'domestic-journal',
+    items: publications.filter((p) => p.type === 'domestic-journal'),
+  },
+  {
+    label: 'Conferences',
+    type: 'conference',
+    items: publications.filter((p) => p.type === 'conference'),
+  },
+].filter((g) => g.items.length > 0);
+---
+
+<Base title="Publications" description={description}>
+  <section class="section">
+    <div class="container">
+      <header class="page-head">
+        <span class="kicker">// PUBLICATIONS</span>
+        <h1>Publications</h1>
+        <p class="intro">
+          Peer-reviewed journal papers on AI-applied cybersecurity — malicious
+          document detection, network traffic analysis, and security system
+          design. A full record is available on Google Scholar.
+        </p>
+        <a
+          class="btn btn-ghost scholar-link"
+          href={SITE.socials.googleScholar}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 3 1 9l4 2.18v5.32c0 .74.4 1.42 1.05 1.78L12 21.5l5.95-3.22A2.03 2.03 0 0 0 19 16.5v-5.32L21 10.1V16h2V9L12 3Zm5 13.38-5 2.7-5-2.7v-3.11l5 2.73 5-2.73v3.11ZM12 13.72 4.16 9.44 12 5.16l7.84 4.28L12 13.72Z"
+            />
+          </svg>
+          Google Scholar Profile
+        </a>
+      </header>
+
+      {
+        groups.map((group) => (
+          <section class="pub-group" aria-labelledby={`group-${group.type}`}>
+            <h2 id={`group-${group.type}`} class="group-title">
+              <span class="group-marker" aria-hidden="true">§</span>
+              {group.label}
+              <span class="group-count">({group.items.length})</span>
+            </h2>
+            <ol class="pub-list" role="list">
+              {group.items.map((pub) => (
+                <li class="pub card">
+                  <div class="pub-year">{pub.year}</div>
+                  <div class="pub-body">
+                    <h3 class="pub-title">
+                      {pub.doi ? (
+                        <a
+                          href={`https://doi.org/${pub.doi}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {pub.title}
+                        </a>
+                      ) : pub.url ? (
+                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                          {pub.title}
+                        </a>
+                      ) : (
+                        pub.title
+                      )}
+                    </h3>
+                    <p class="pub-authors">
+                      {pub.authors.map((author, i) => (
+                        <>
+                          {author === AUTHOR_ME ? (
+                            <strong class="me">{author}</strong>
+                          ) : (
+                            <span>{author}</span>
+                          )}
+                          {i < pub.authors.length - 1 && ', '}
+                        </>
+                      ))}
+                    </p>
+                    <p class="pub-venue">
+                      <em>{pub.venue}</em>
+                      {pub.volume && <span class="venue-detail">, {pub.volume}</span>}
+                      {pub.pages && <span class="venue-detail">, pp. {pub.pages}</span>}
+                      {pub.articleNo && <span class="venue-detail">, Art. {pub.articleNo}</span>}
+                    </p>
+                    <div class="pub-meta">
+                      <span class="tag">{pub.venueShort}</span>
+                      {pub.note && <span class="badge-accent">{pub.note}</span>}
+                      {pub.doi && (
+                        <a
+                          class="doi-link"
+                          href={`https://doi.org/${pub.doi}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          DOI: {pub.doi}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-head {
+    max-width: var(--prose-width);
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .intro {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+  }
+
+  .scholar-link {
+    text-decoration: none;
+  }
+
+  .pub-group {
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .group-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.2rem;
+  }
+
+  .group-marker {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+
+  .group-count {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .pub-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .pub {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(1rem, 3vw, 1.75rem);
+    padding: clamp(1.1rem, 3vw, 1.6rem);
+  }
+
+  .pub-year {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.5;
+    padding-top: 0.15rem;
+  }
+
+  .pub-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.45;
+  }
+
+  .pub-title a {
+    color: var(--text-strong);
+  }
+
+  .pub-title a:hover {
+    color: var(--accent);
+  }
+
+  .pub-authors {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-authors .me {
+    color: var(--text-strong);
+    font-weight: 700;
+  }
+
+  .pub-venue {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 0.7rem;
+  }
+
+  .venue-detail {
+    color: var(--text-muted);
+  }
+
+  .pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .doi-link {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--primary);
+  }
+
+  .doi-link:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 480px) {
+    .pub {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+    .pub-year {
+      padding-top: 0;
+    }
+  }
+</style>

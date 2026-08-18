@@ -1,0 +1,340 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, AUTHOR_ME } from '../config/site';
+import { education, experience, certifications, interests } from '../data/cv';
+
+const description = `About ${SITE.siteName} — Ph.D. in Computer Science (Hanyang University), researching AI-applied cybersecurity: malicious document detection, network traffic analysis, and detection engineering.`;
+---
+
+<Base title="About" description={description}>
+  <section class="section">
+    <div class="container">
+      <span class="kicker">// ABOUT</span>
+      <h1>About Me</h1>
+
+      <div class="bio-grid">
+        <div class="bio-text">
+          <p>
+            I am {AUTHOR_ME}, a Ph.D. in Computer Science from
+            the <strong>Software Security Laboratory</strong> at Hanyang University
+            (advisor: Prof. Eul&nbsp;Gyu&nbsp;Im). My research applies machine
+            learning and deep learning to core cybersecurity problems —
+            detecting malicious files and analyzing network traffic for
+            intrusion detection.
+          </p>
+          <p>
+            My recent work focuses on <strong>malicious document detection</strong>,
+            particularly PDF-based malware, including how malicious samples
+            evolve over time and how detection models can remain robust against
+            that temporal drift. Across all of my work I take a defensive
+            security perspective: building practical, reliable detection
+            techniques that hold up against real-world threats.
+          </p>
+          <p>
+            Before and during graduate school I worked across the security
+            industry — from CERT operations and network security monitoring to
+            security log processing at scale and AI research engineering —
+            experience that keeps my research grounded in operational reality.
+          </p>
+          <p class="bio-affiliation">
+            <span aria-hidden="true">▸</span> {SITE.affiliation}
+          </p>
+        </div>
+        <div class="bio-photo">
+          <picture>
+            <source srcset="/img/dschoi.webp" type="image/webp" />
+            <img
+              src="/img/dschoi.jpg"
+              alt={`Portrait of ${AUTHOR_ME}`}
+              width="640"
+              height="640"
+              loading="eager"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cv-section" aria-labelledby="education-heading">
+    <div class="container">
+      <span class="kicker">// CV — EDUCATION</span>
+      <h2 id="education-heading">Education</h2>
+      <ol class="timeline" role="list">
+        {
+          education.map((item) => (
+            <li class="timeline-item">
+              <div class="timeline-period">{item.period}</div>
+              <div class="timeline-body">
+                <h3 class="timeline-title">{item.title}</h3>
+                <p class="timeline-org">{item.org}</p>
+                {item.details && (
+                  <ul class="timeline-details">
+                    {item.details.map((d) => (
+                      <li>{d}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section cv-section" aria-labelledby="experience-heading">
+    <div class="container">
+      <span class="kicker">// CV — EXPERIENCE</span>
+      <h2 id="experience-heading">Experience</h2>
+      <ol class="timeline" role="list">
+        {
+          experience.map((item) => (
+            <li class="timeline-item">
+              <div class="timeline-period">{item.period}</div>
+              <div class="timeline-body">
+                <h3 class="timeline-title">{item.title}</h3>
+                <p class="timeline-org">{item.org}</p>
+                {item.details && (
+                  <ul class="timeline-details">
+                    {item.details.map((d) => (
+                      <li>{d}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section cv-section" aria-labelledby="extras-heading">
+    <div class="container">
+      <h2 id="extras-heading" class="visually-hidden">
+        Certifications and Academic Interests
+      </h2>
+      <div class="extras-grid">
+        <div class="card extras-card">
+          <span class="kicker">// CERTIFICATIONS</span>
+          <h3>Certifications</h3>
+          <ul class="cert-list">
+            {certifications.map((c) => <li>{c}</li>)}
+          </ul>
+        </div>
+        <div class="card extras-card">
+          <span class="kicker">// INTERESTS</span>
+          <h3>Academic Interests</h3>
+          <ul class="interest-list" role="list">
+            {
+              interests.map((i) => (
+                <li>
+                  <span class="tag">{i}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ── bio ── */
+  .bio-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+    margin-top: 1rem;
+  }
+  .bio-text {
+    max-width: var(--prose-width);
+    font-size: 1.02rem;
+  }
+  .bio-affiliation {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 1.4rem;
+  }
+  .bio-affiliation span {
+    color: var(--accent);
+    margin-right: 0.35rem;
+  }
+  .bio-photo img {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow);
+  }
+
+  /* ── section rhythm ── */
+  .cv-section {
+    padding-block: clamp(1.6rem, 4vw, 2.8rem);
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── timeline: period left (mono), content right ── */
+  .timeline {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 10.5rem minmax(0, 1fr);
+    gap: 0.35rem 2rem;
+    position: relative;
+    padding: 1.15rem 0 1.15rem 0;
+  }
+  .timeline-item + .timeline-item {
+    border-top: 1px dashed var(--border);
+  }
+  .timeline-period {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--primary);
+    padding-top: 0.28rem;
+    white-space: nowrap;
+  }
+  .timeline-body {
+    max-width: var(--prose-width);
+    position: relative;
+    padding-left: 1.4rem;
+  }
+  /* vertical rail + node marker */
+  .timeline-body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    bottom: -1.7rem;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item:last-child .timeline-body::before {
+    bottom: 0;
+  }
+  .timeline-body::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 0.42rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  .timeline-title {
+    font-size: 1.05rem;
+    margin: 0 0 0.15rem;
+  }
+  .timeline-org {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin: 0 0 0.35rem;
+  }
+  .timeline-details {
+    margin: 0.25rem 0 0;
+    padding-left: 1.15rem;
+    font-size: 0.92rem;
+    color: var(--text);
+  }
+  .timeline-details li {
+    margin-bottom: 0.25rem;
+  }
+  .timeline-details li::marker {
+    color: var(--accent);
+  }
+
+  /* ── certifications & interests ── */
+  .extras-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .extras-card {
+    padding: 1.4rem 1.6rem;
+  }
+  .extras-card .kicker {
+    margin-bottom: 0.3rem;
+  }
+  .extras-card h3 {
+    margin-bottom: 0.7rem;
+  }
+  .cert-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    font-size: 0.95rem;
+  }
+  .cert-list li::marker {
+    color: var(--accent);
+  }
+  .interest-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ── responsive ── */
+  @media (max-width: 760px) {
+    .bio-grid {
+      grid-template-columns: 1fr;
+    }
+    .bio-photo {
+      order: -1;
+      max-width: 210px;
+    }
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+    .timeline-body::before,
+    .timeline-body::after {
+      display: none;
+    }
+    .timeline-body {
+      padding-left: 0;
+    }
+    .timeline-period {
+      padding-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .timeline-period::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+      flex-shrink: 0;
+    }
+    .extras-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

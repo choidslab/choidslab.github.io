@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+
+const description = 'Page not found — the requested page does not exist on this site.';
+---
+
+<Base title="Page Not Found" description={description}>
+  <section class="section">
+    <div class="container notfound">
+      <p class="err-prompt" aria-hidden="true">
+        <span class="prompt-dollar">$</span> curl {'{'}this-page{'}'}
+        <span class="err-response">HTTP/1.1 404 Not Found</span>
+      </p>
+      <span class="kicker">// ERROR 404</span>
+      <h1>Page not found</h1>
+      <p class="err-copy">
+        The page you were looking for doesn't exist — it may have moved during
+        a site rebuild, or the URL may be mistyped.
+      </p>
+      <div class="err-actions">
+        <a class="btn btn-primary" href="/">Back to Home</a>
+        <a class="btn btn-ghost" href="/publications/">Publications</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .notfound {
+    max-width: 42rem;
+    padding-block: clamp(2rem, 8vw, 5rem);
+  }
+  .err-prompt {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1.6rem;
+  }
+  .prompt-dollar {
+    color: var(--accent);
+  }
+  .err-response {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .err-copy {
+    max-width: 34rem;
+    color: var(--text-muted);
+    font-size: 1.02rem;
+  }
+  .err-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.6rem;
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+import { SITE } from '../config/site';
+const year = new Date().getFullYear();
+const brand = SITE.lab.useLabBranding ? `${SITE.lab.name} — ${SITE.lab.fullName}` : SITE.siteName;
+---
+
+<footer>
+  <div class="container inner">
+    <div class="left">
+      <p class="brand">© {year} {brand}</p>
+      <p class="muted">{SITE.affiliation}</p>
+    </div>
+    <div class="right">
+      <a href={`mailto:${SITE.emails[0]}`}>{SITE.emails[0]}</a>
+      {SITE.socials.googleScholar && (
+        <a href={SITE.socials.googleScholar} target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      )}
+      {SITE.socials.github && (
+        <a href={SITE.socials.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+      )}
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--bg-elevated);
+    margin-top: 4rem;
+    font-size: 0.88rem;
+  }
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.6rem;
+  }
+  p { margin: 0; }
+  .brand { font-weight: 600; color: var(--text-strong); }
+  .muted { color: var(--text-muted); font-size: 0.82rem; }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .right a { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
+  .right a:hover { color: var(--accent); }
+</style>

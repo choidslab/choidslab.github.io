@@ -1,0 +1,190 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { SITE } from '../../config/site';
+
+const items = (await getCollection('news')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const fmtDate = (d: Date) => d.toISOString().slice(0, 10);
+
+const iconLabels: Record<string, string> = {
+  paper: 'Publication',
+  award: 'Award',
+  talk: 'Talk',
+  milestone: 'Milestone',
+  etc: 'News',
+};
+
+const description = `News and updates from ${SITE.siteName}: publications, milestones, and talks.`;
+---
+
+<Base title="News" description={description}>
+  <section class="section">
+    <div class="container">
+      <header class="page-head">
+        <span class="kicker">// NEWS</span>
+        <h1>News</h1>
+        <p class="intro">
+          Publications, milestones, and other updates — most recent first.
+        </p>
+      </header>
+
+      {
+        items.length === 0 ? (
+          <p class="empty">No news yet.</p>
+        ) : (
+          <ol class="timeline" role="list">
+            {items.map((item) => (
+              <li class="entry">
+                <span
+                  class={`marker marker-${item.data.icon}`}
+                  title={iconLabels[item.data.icon]}
+                >
+                  {item.data.icon === 'paper' && (
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M4 1.5h5.5L13 5v9.5H4z" />
+                      <path d="M9.5 1.5V5H13" />
+                      <path d="M6 8h5M6 10.5h5" />
+                    </svg>
+                  )}
+                  {item.data.icon === 'award' && (
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="8" cy="6" r="3.5" />
+                      <path d="M6 9l-1.5 5L8 12.5 11.5 14 10 9" />
+                    </svg>
+                  )}
+                  {item.data.icon === 'talk' && (
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M2 3.5h12v7H8.5L5 13.5v-3H2z" />
+                    </svg>
+                  )}
+                  {item.data.icon === 'milestone' && (
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M4 14.5V1.5" />
+                      <path d="M4 2.5h8l-2 2.5 2 2.5H4" />
+                    </svg>
+                  )}
+                  {item.data.icon === 'etc' && (
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="8" cy="8" r="5.5" />
+                      <path d="M8 5.5V8l2 1.5" />
+                    </svg>
+                  )}
+                </span>
+                <div class="entry-body">
+                  <div class="entry-meta">
+                    <time datetime={item.data.date.toISOString()}>
+                      {fmtDate(item.data.date)}
+                    </time>
+                    <span class="badge-accent">{iconLabels[item.data.icon]}</span>
+                  </div>
+                  <p class="entry-title">{item.data.title}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        )
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-head {
+    max-width: var(--prose-width);
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .intro {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0;
+  }
+
+  .empty {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 46rem;
+    position: relative;
+  }
+
+  /* vertical rule through the markers */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.95rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      var(--border-strong),
+      var(--border),
+      transparent
+    );
+  }
+
+  .entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.1rem;
+    padding-bottom: clamp(1.6rem, 4vw, 2.2rem);
+  }
+
+  .entry:last-child {
+    padding-bottom: 0;
+  }
+
+  .marker {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-strong);
+    color: var(--primary);
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+  }
+
+  .marker-paper,
+  .marker-award {
+    color: var(--accent);
+  }
+
+  .entry-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .entry-meta time {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .entry-title {
+    margin: 0;
+    color: var(--text-strong);
+    font-weight: 500;
+    max-width: 62ch;
+    line-height: 1.55;
+  }
+</style>
