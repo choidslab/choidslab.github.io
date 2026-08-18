@@ -94,18 +94,11 @@ export const experience: TimelineItem[] = [
     period: '2012.12 – 2013.01',
     details: ['Operated IPS; packet and log analysis in Linux environments'],
   },
-  {
-    title: 'Cybersecurity Specialist (CERT Team)',
-    org: 'Republic of Korea Army, 2nd Operations Command, Daegu',
-    period: '2009.02 – 2010.12',
-    details: [
-      'Network traffic monitoring, antivirus policy management (AhnLab Policy Center), Infocon procedures',
-    ],
-  },
 ];
 
 export const certifications: string[] = [
   'Engineer Information Security (정보보안기사), Korea',
+  'Engineer Information Processing (정보처리기사), Korea',
 ];
 
 export const interests: string[] = [

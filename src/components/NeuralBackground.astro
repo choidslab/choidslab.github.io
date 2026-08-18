@@ -82,14 +82,14 @@
     let nodes: Node[] = [];
 
     function seedNodes() {
-      // density-based count: ~1 node per 26k px², clamped 24–70
-      const count = Math.max(24, Math.min(70, Math.round((W * H) / 26000)));
+      // density-based count: ~1 node per 19k px², clamped 32–95
+      const count = Math.max(32, Math.min(95, Math.round((W * H) / 19000)));
       nodes = Array.from({ length: count }, () => ({
         x: Math.random() * W,
         y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.22,
-        vy: (Math.random() - 0.5) * 0.22,
-        r: 1 + Math.random() * 1.4,
+        vx: (Math.random() - 0.5) * 0.34,
+        vy: (Math.random() - 0.5) * 0.34,
+        r: 1.4 + Math.random() * 1.9,
       }));
     }
 
@@ -173,14 +173,14 @@
           const dy = mouse.y - n.y;
           const d = Math.hypot(dx, dy);
           if (d < MOUSE_DIST && d > 1) {
-            const f = ((1 - d / MOUSE_DIST) * 0.012);
+            const f = ((1 - d / MOUSE_DIST) * 0.018);
             n.vx += (dx / d) * f;
             n.vy += (dy / d) * f;
           }
         }
         // clamp speed so attraction never gets wild
         const speed = Math.hypot(n.vx, n.vy);
-        const MAX = 0.55;
+        const MAX = 0.85;
         if (speed > MAX) { n.vx = (n.vx / speed) * MAX; n.vy = (n.vy / speed) * MAX; }
 
         n.x += n.vx;

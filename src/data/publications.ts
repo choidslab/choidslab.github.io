@@ -31,7 +31,7 @@ export const publications: Publication[] = [
     doi: '10.1016/j.asoc.2025.114461',
     type: 'international-journal',
     selected: true,
-    note: 'SCIE, Q1',
+    note: 'SCIE, Q1 · IF: 7.8',
   },
   {
     title:
@@ -44,7 +44,7 @@ export const publications: Publication[] = [
     doi: '10.3390/app15126546',
     type: 'international-journal',
     selected: true,
-    note: 'SCIE',
+    note: 'SCIE, Q2 · IF: 2.9',
   },
   {
     title: 'Windows Malware Family Dataset Construction and Classification',
