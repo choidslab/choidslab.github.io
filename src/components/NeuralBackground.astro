@@ -1,0 +1,215 @@
+---
+/**
+ * NeuralBackground — subtle animated neural-network canvas behind the page.
+ *
+ * - Slow-drifting nodes connected by faint edges (a "neural net" feel).
+ * - Moving the cursor gently attracts nearby nodes and draws accent-colored
+ *   links from them to the cursor — restrained, never distracting.
+ * - Colors follow the active theme (light/dark) via CSS variables.
+ * - Respects prefers-reduced-motion (renders a single static frame),
+ *   pauses when the tab is hidden, caps device-pixel-ratio at 2.
+ * - pointer-events: none — never interferes with the page.
+ */
+---
+
+<canvas id="neural-bg" aria-hidden="true"></canvas>
+
+<style>
+  #neural-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const canvas = document.getElementById('neural-bg') as HTMLCanvasElement | null;
+
+  if (canvas) {
+    const ctx = canvas.getContext('2d')!;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const finePointer = window.matchMedia('(pointer: fine)').matches;
+
+    // ── theme colors (re-read when html.dark toggles) ──
+    let nodeColor = '';
+    let edgeColor = '';
+    let accentColor = '';
+    let isDark = false;
+
+    function hexToRgb(hex: string): [number, number, number] {
+      const h = hex.replace('#', '');
+      const f = h.length === 3 ? h.split('').map((c) => c + c).join('') : h;
+      return [
+        parseInt(f.slice(0, 2), 16),
+        parseInt(f.slice(2, 4), 16),
+        parseInt(f.slice(4, 6), 16),
+      ];
+    }
+
+    function readTheme() {
+      isDark = document.documentElement.classList.contains('dark');
+      const styles = getComputedStyle(document.documentElement);
+      const primary = styles.getPropertyValue('--primary').trim() || '#1d3f8f';
+      const accent = styles.getPropertyValue('--accent').trim() || '#a51c3c';
+      nodeColor = primary;
+      edgeColor = primary;
+      accentColor = accent;
+    }
+    readTheme();
+    new MutationObserver(readTheme).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    // ── canvas sizing ──
+    let W = 0, H = 0, dpr = 1;
+    function resize() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = window.innerWidth;
+      H = window.innerHeight;
+      canvas.width = W * dpr;
+      canvas.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      seedNodes();
+      if (reduceMotion) drawFrame(); // keep the static frame in sync
+    }
+
+    // ── nodes ──
+    interface Node { x: number; y: number; vx: number; vy: number; r: number }
+    let nodes: Node[] = [];
+
+    function seedNodes() {
+      // density-based count: ~1 node per 26k px², clamped 24–70
+      const count = Math.max(24, Math.min(70, Math.round((W * H) / 26000)));
+      nodes = Array.from({ length: count }, () => ({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.22,
+        vy: (Math.random() - 0.5) * 0.22,
+        r: 1 + Math.random() * 1.4,
+      }));
+    }
+
+    // ── mouse ──
+    const mouse = { x: -9999, y: -9999, active: false };
+    if (finePointer) {
+      window.addEventListener('pointermove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        mouse.active = true;
+      }, { passive: true });
+      window.addEventListener('pointerleave', () => { mouse.active = false; });
+      document.addEventListener('mouseleave', () => { mouse.active = false; });
+    }
+
+    const LINK_DIST = 130;      // node↔node edge threshold
+    const MOUSE_DIST = 170;     // cursor influence radius
+    const EDGE_ALPHA = () => (isDark ? 0.14 : 0.1);
+    const NODE_ALPHA = () => (isDark ? 0.4 : 0.3);
+    const MOUSE_ALPHA = () => (isDark ? 0.4 : 0.32);
+
+    function drawFrame() {
+      ctx.clearRect(0, 0, W, H);
+      const [er, eg, eb] = hexToRgb(edgeColor);
+      const [nr, ng, nb] = hexToRgb(nodeColor);
+      const [ar, ag, ab] = hexToRgb(accentColor);
+
+      // node↔node edges
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const d = Math.hypot(dx, dy);
+          if (d < LINK_DIST) {
+            const a = (1 - d / LINK_DIST) * EDGE_ALPHA();
+            ctx.strokeStyle = `rgba(${er},${eg},${eb},${a})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // cursor links (accent color) + node glow near cursor
+      if (mouse.active) {
+        for (const n of nodes) {
+          const d = Math.hypot(n.x - mouse.x, n.y - mouse.y);
+          if (d < MOUSE_DIST) {
+            const a = (1 - d / MOUSE_DIST) * MOUSE_ALPHA();
+            ctx.strokeStyle = `rgba(${ar},${ag},${ab},${a})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(n.x, n.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // nodes
+      for (const n of nodes) {
+        const dm = mouse.active ? Math.hypot(n.x - mouse.x, n.y - mouse.y) : Infinity;
+        const near = dm < MOUSE_DIST;
+        const boost = near ? (1 - dm / MOUSE_DIST) * 0.35 : 0;
+        ctx.fillStyle = near
+          ? `rgba(${ar},${ag},${ab},${NODE_ALPHA() + boost})`
+          : `rgba(${nr},${ng},${nb},${NODE_ALPHA()})`;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r + (near ? boost * 1.5 : 0), 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function step() {
+      for (const n of nodes) {
+        // gentle attraction toward the cursor
+        if (mouse.active) {
+          const dx = mouse.x - n.x;
+          const dy = mouse.y - n.y;
+          const d = Math.hypot(dx, dy);
+          if (d < MOUSE_DIST && d > 1) {
+            const f = ((1 - d / MOUSE_DIST) * 0.012);
+            n.vx += (dx / d) * f;
+            n.vy += (dy / d) * f;
+          }
+        }
+        // clamp speed so attraction never gets wild
+        const speed = Math.hypot(n.vx, n.vy);
+        const MAX = 0.55;
+        if (speed > MAX) { n.vx = (n.vx / speed) * MAX; n.vy = (n.vy / speed) * MAX; }
+
+        n.x += n.vx;
+        n.y += n.vy;
+        // wrap around edges
+        if (n.x < -20) n.x = W + 20; else if (n.x > W + 20) n.x = -20;
+        if (n.y < -20) n.y = H + 20; else if (n.y > H + 20) n.y = -20;
+      }
+    }
+
+    // ── loop (paused when tab hidden) ──
+    let raf = 0;
+    function loop() {
+      step();
+      drawFrame();
+      raf = requestAnimationFrame(loop);
+    }
+
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+
+    if (reduceMotion) {
+      drawFrame(); // single static frame, no animation
+    } else {
+      raf = requestAnimationFrame(loop);
+      document.addEventListener('visibilitychange', () => {
+        cancelAnimationFrame(raf);
+        if (!document.hidden) raf = requestAnimationFrame(loop);
+      });
+    }
+  }
+</script>

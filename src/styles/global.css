@@ -22,7 +22,7 @@
   --border-strong: #b9c6e0;
   --code-bg: #eef2f9;
   --shadow: 0 1px 2px rgb(13 27 56 / 0.06), 0 8px 24px -12px rgb(13 27 56 / 0.12);
-  --grid-line: rgb(29 63 143 / 0.055);
+  --grid-line: rgb(29 63 143 / 0.045);
   --header-bg: rgb(246 248 252 / 0.85);
 
   /* system stack only — no external fonts are loaded */
@@ -58,7 +58,7 @@ html.dark {
   --border-strong: #2c3c60;
   --code-bg: #0d1526;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -12px rgb(0 0 0 / 0.5);
-  --grid-line: rgb(109 154 255 / 0.05);
+  --grid-line: rgb(109 154 255 / 0.038);
   --header-bg: rgb(10 17 32 / 0.85);
 
   color-scheme: dark;
