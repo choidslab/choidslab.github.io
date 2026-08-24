@@ -13,22 +13,22 @@ export const education: TimelineItem[] = [
   {
     title: 'Ph.D. in Computer Science',
     org: 'Hanyang University, Seoul, South Korea',
-    period: '2022.03 – 2026.08',
+    period: '2022. 03 – 2026. 08',
     details: [
+      'Dissertation: “Malicious PDF File Detection Based on Temporal Analysis of Features”',
       'Software Security Laboratory (advisor: Prof. Eul Gyu Im)',
-      'Dissertation research on AI-based malware analysis with a focus on document-based malware',
-      'Research on AI-based network intrusion detection',
+      'Research on AI-based malware analysis (document-based malware) and network intrusion detection',
     ],
   },
   {
     title: 'M.S. in Computer and Software',
     org: 'Hanyang University, Seoul, South Korea',
-    period: '2015 – 2017',
+    period: '2015. 09 – 2017. 08',
   },
   {
     title: 'B.E. in Computer Engineering',
     org: 'Myongji University, Yongin, South Korea',
-    period: '2006 – 2013',
+    period: '2006. 03 – 2013. 02',
   },
 ];
 
@@ -36,7 +36,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Security Researcher',
     org: 'waiker, Inc., Seoul (Full-time)',
-    period: '2021.03 – 2021.06',
+    period: '2021. 03 – 2021. 06',
     details: [
       'Collected and analyzed security data from AWS cloud infrastructure',
       'Built a large-scale security log processing system (Python, ELK Stack, WAZUH)',
@@ -46,7 +46,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Information Security Engineer',
     org: 'Myongji University, Yongin (Full-time)',
-    period: '2019.09 – 2020.11',
+    period: '2019. 09 – 2020. 11',
     details: [
       'Developed network vulnerability assessment tools in Python',
       'Operated DLP security solutions and analyzed logs',
@@ -56,7 +56,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'AI Research Engineer',
     org: 'Genesis Lab, Inc., Seoul (Full-time)',
-    period: '2019.02 – 2019.08',
+    period: '2019. 02 – 2019. 08',
     details: [
       'AI research for interview-analysis software',
       'Built video data collection and preprocessing pipelines (OpenCV, ffmpeg, MTCNN)',
@@ -66,7 +66,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Student Researcher',
     org: 'Hanyang University, Seoul (Full-time)',
-    period: '2015.09 – 2017.08',
+    period: '2015. 09 – 2017. 08',
     details: [
       'ML-based classification of normal/abnormal users from network traffic (NSR project)',
       'Developed feature extraction and preprocessing tools for packet analysis',
@@ -75,7 +75,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Security Software Engineer',
     org: 'nSecure Co., Ltd., Seoul (Full-time)',
-    period: '2014.12 – 2015.06',
+    period: '2014. 12 – 2015. 06',
     details: [
       'Technical support for CA Identity Manager (IAM) at financial data centers (Kookmin Bank)',
     ],
@@ -83,7 +83,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Security Software Engineer (Intern)',
     org: 'Future Systems, Seongnam',
-    period: '2013.10 – 2014.03',
+    period: '2013. 10 – 2014. 03',
     details: [
       'Black-box testing of firewall software; network traffic analysis with Wireshark',
     ],
@@ -91,7 +91,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Network Security Engineer (Intern)',
     org: 'WINS Co., Ltd., Seongnam',
-    period: '2012.12 – 2013.01',
+    period: '2012. 12 – 2013. 01',
     details: ['Operated IPS; packet and log analysis in Linux environments'],
   },
 ];
