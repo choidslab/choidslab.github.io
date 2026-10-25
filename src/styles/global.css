@@ -1,29 +1,36 @@
 /* ═══════════════════════════════════════════════════════════════
-   DESIGN TOKENS — deep blue / cyber-AI theme, light + dark mode
-   Light mode: deep-blue text on cool white, royal-red accent
-   Dark mode:  near-black navy, luminous blue + softened red
+   DESIGN TOKENS: DS brand palette, light + dark mode
+   Oxford blue   #002147  brand base (light: headings, buttons / dark: page)
+   Royal crimson #9D2235 light / #EA8695 dark  core emphasis only
+   Trace gold    #C9A54C  lines, markers, kickers, hovers
+                 (light-mode gold text uses #82621C for contrast)
+   Link blue     #1D4E89 light / #8FB4E8 dark
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
   /* ── palette: light ── */
-  --bg: #f6f8fc;
+  --bg: #f4f6fa;
   --bg-elevated: #ffffff;
-  --bg-inset: #eef2f9;
-  --text: #16294d;            /* deep blue body text */
-  --text-strong: #0d1b38;     /* headings */
-  --text-muted: #4a5b7d;
-  --primary: #1d3f8f;         /* deep blue */
-  --primary-soft: #e6ecf9;
-  --accent: #a51c3c;          /* royal red */
-  --accent-soft: #fbe9ee;
+  --bg-inset: #edf1f7;
+  --text: #1c2b45;            /* navy-tinted body text */
+  --text-strong: #002147;     /* headings: Oxford blue */
+  --text-muted: #4f5d78;
+  --primary: #002147;         /* Oxford blue */
+  --primary-soft: #e6ecf5;
+  --link: #1d4e89;            /* link blue */
+  --accent: #9d2235;          /* Royal crimson: core emphasis */
+  --accent-soft: #f9ecee;
+  --gold: #c9a54c;            /* Trace gold: lines, dots, borders */
+  --gold-text: #82621c;       /* gold for text on light surfaces */
   --on-primary: #ffffff;      /* text on --primary fills */
   --on-accent: #ffffff;       /* text on --accent fills */
-  --border: #d9e1f0;
-  --border-strong: #b9c6e0;
-  --code-bg: #eef2f9;
-  --shadow: 0 1px 2px rgb(13 27 56 / 0.06), 0 8px 24px -12px rgb(13 27 56 / 0.12);
-  --grid-line: rgb(29 63 143 / 0.045);
-  --header-bg: rgb(246 248 252 / 0.85);
+  --on-gold: #002147;         /* text on --gold fills */
+  --border: #d9e0ec;
+  --border-strong: #b8c4d9;
+  --code-bg: #edf1f7;
+  --shadow: 0 1px 2px rgb(0 33 71 / 0.06), 0 8px 24px -12px rgb(0 33 71 / 0.12);
+  --grid-line: rgb(0 33 71 / 0.045);
+  --header-bg: rgb(244 246 250 / 0.85);
 
   /* system stack only — no external fonts are loaded */
   --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
@@ -42,24 +49,28 @@
 
 html.dark {
   /* ── palette: dark ── */
-  --bg: #0a1120;
-  --bg-elevated: #101a30;
-  --bg-inset: #0d1526;
-  --text: #ccd8ef;
-  --text-strong: #eef3fc;
-  --text-muted: #8496b8;
-  --primary: #6d9aff;
-  --primary-soft: #16233f;
-  --accent: #ff667f;
-  --accent-soft: #2b1622;
-  --on-primary: #0a1120;      /* dark navy on luminous blue — keeps AA contrast */
-  --on-accent: #0a1120;       /* dark navy on soft red — keeps AA contrast */
-  --border: #1d2a45;
-  --border-strong: #2c3c60;
-  --code-bg: #0d1526;
-  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -12px rgb(0 0 0 / 0.5);
-  --grid-line: rgb(109 154 255 / 0.038);
-  --header-bg: rgb(10 17 32 / 0.85);
+  --bg: #002147;              /* Oxford blue page */
+  --bg-elevated: #0a2d5c;     /* cards */
+  --bg-inset: #052652;
+  --text: #dce3ee;
+  --text-strong: #f3f5f9;
+  --text-muted: #a9b6ca;
+  --primary: #8fb4e8;
+  --primary-soft: #0f3466;
+  --link: #8fb4e8;
+  --accent: #ea8695;          /* Royal crimson, dark-mode pair */
+  --accent-soft: #3a1f3d;
+  --gold: #c9a54c;
+  --gold-text: #c9a54c;
+  --on-primary: #002147;      /* Oxford blue on light blue: AA */
+  --on-accent: #002147;       /* Oxford blue on light crimson: AA */
+  --on-gold: #002147;
+  --border: #1a3a66;
+  --border-strong: #2a4c7d;
+  --code-bg: #001a3a;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.35), 0 8px 24px -12px rgb(0 0 0 / 0.45);
+  --grid-line: rgb(143 180 232 / 0.04);
+  --header-bg: rgb(0 33 71 / 0.85);
 
   color-scheme: dark;
 }
@@ -107,11 +118,11 @@ h3 { font-size: 1.2rem; font-weight: 650; }
 p { margin: 0 0 1em; }
 
 a {
-  color: var(--primary);
+  color: var(--link);
   text-decoration: none;
   transition: color 0.15s ease;
 }
-a:hover { color: var(--accent); }
+a:hover { color: var(--gold-text); }
 
 img { max-width: 100%; height: auto; }
 
@@ -226,7 +237,7 @@ th { background: var(--bg-inset); color: var(--text-strong); }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--gold-text);
   margin-bottom: 0.6rem;
   display: block;
 }
@@ -260,8 +271,8 @@ th { background: var(--bg-inset); color: var(--text-strong); }
   color: var(--on-primary);
 }
 .btn-primary:hover {
-  background: var(--accent);
-  color: var(--on-accent);
+  background: var(--gold);
+  color: var(--on-gold);
   transform: translateY(-1px);
 }
 .btn-ghost {
@@ -270,8 +281,8 @@ th { background: var(--bg-inset); color: var(--text-strong); }
   background: transparent;
 }
 .btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--gold);
+  color: var(--gold-text);
 }
 
 .tag {
@@ -310,6 +321,15 @@ th { background: var(--bg-inset); color: var(--text-strong); }
 }
 .prose ul, .prose ol { padding-left: 1.4em; }
 .prose li { margin-bottom: 0.35em; }
+
+/* core emphasis in posts: write <mark>중요한 문구</mark> in markdown */
+.prose mark,
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 700;
+  padding: 0;
+}
 
 /* reduced motion */
 @media (prefers-reduced-motion: reduce) {

@@ -95,7 +95,7 @@ const brand = SITE.lab.useLabBranding ? SITE.lab.name : SITE.siteName;
     min-width: 0;
   }
   .brand-mark {
-    color: var(--accent);
+    color: var(--gold-text);
     font-size: 0.85rem;
     transform: rotate(90deg);
   }
@@ -134,12 +134,13 @@ const brand = SITE.lab.useLabBranding ? SITE.lab.name : SITE.siteName;
     color: var(--text-muted);
   }
   nav a:hover {
-    color: var(--accent);
+    color: var(--gold-text);
     background: var(--bg-inset);
   }
   nav a.active {
     color: var(--primary);
     background: var(--primary-soft);
+    box-shadow: inset 0 -2px 0 var(--gold);
   }
   .actions {
     display: flex;
