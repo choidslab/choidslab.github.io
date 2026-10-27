@@ -31,7 +31,7 @@ export const SITE = {
 
   /** Contact emails — first entry is primary. Replace the Hanyang
    *  address later by editing this array only. */
-  emails: ['tim.dschoi@gmail.com', 'dslab0915@hanyang.ac.kr'],
+  emails: ['dschoi@dslab.kr', 'dslab0915@hanyang.ac.kr'],
 
   /** Affiliation line used on About / Contact / footer. */
   affiliation:
