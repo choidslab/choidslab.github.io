@@ -1,6 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    DESIGN TOKENS: DS brand palette, light + dark mode
-   Oxford blue   #002147  brand base (light: headings, buttons / dark: page)
+   Oxford blue   #002147  brand base (light: headings, buttons / dark: cards)
+   Midnight oxford #00162F dark-mode page background
    Royal crimson #9D2235 light / #EA8695 dark  core emphasis only
    Trace gold    #C9A54C  lines, markers, kickers, hovers
                  (light-mode gold text uses #82621C for contrast)
@@ -49,28 +50,28 @@
 
 html.dark {
   /* ── palette: dark ── */
-  --bg: #002147;              /* Oxford blue page */
-  --bg-elevated: #0a2d5c;     /* cards */
-  --bg-inset: #052652;
+  --bg: #00162f;              /* Midnight oxford page */
+  --bg-elevated: #002147;     /* cards: Oxford blue */
+  --bg-inset: #001b39;
   --text: #dce3ee;
   --text-strong: #f3f5f9;
   --text-muted: #a9b6ca;
   --primary: #8fb4e8;
-  --primary-soft: #0f3466;
+  --primary-soft: #0a2d5c;
   --link: #8fb4e8;
   --accent: #ea8695;          /* Royal crimson, dark-mode pair */
-  --accent-soft: #3a1f3d;
+  --accent-soft: #331a35;
   --gold: #c9a54c;
   --gold-text: #c9a54c;
-  --on-primary: #002147;      /* Oxford blue on light blue: AA */
-  --on-accent: #002147;       /* Oxford blue on light crimson: AA */
-  --on-gold: #002147;
-  --border: #1a3a66;
-  --border-strong: #2a4c7d;
-  --code-bg: #001a3a;
+  --on-primary: #00162f;      /* Midnight oxford on light blue: AA */
+  --on-accent: #00162f;       /* Midnight oxford on light crimson: AA */
+  --on-gold: #00162f;
+  --border: #12305a;
+  --border-strong: #234470;
+  --code-bg: #00112a;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.35), 0 8px 24px -12px rgb(0 0 0 / 0.45);
   --grid-line: rgb(143 180 232 / 0.04);
-  --header-bg: rgb(0 33 71 / 0.85);
+  --header-bg: rgb(0 22 47 / 0.85);
 
   color-scheme: dark;
 }
